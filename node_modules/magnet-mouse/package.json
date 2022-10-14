@@ -1,0 +1,39 @@
+{
+  "name": "magnet-mouse",
+  "version": "1.0.0",
+  "main": "lib/magnet-mouse.min.js",
+  "module": "src/index.js",
+  "description": "Magnet element by mouse in Javascript",
+  "author": "Guillaume Egloff",
+  "keywords": [
+    "animation",
+    "javascript",
+    "mouse",
+    "follow"
+  ],
+  "license": "MIT",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "prepare": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fluffy-factory/magnet-mouse.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fluffy-factory/magnet-mouse/issues"
+  },
+  "homepage": "https://github.com/fluffy-factory/magnet-mouse#readme",
+  "devDependencies": {
+    "@babel/core": "^7.5.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.5.4",
+    "@babel/preset-env": "^7.5.2",
+    "rollup": "^1.16.7",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-terser": "^5.1.1"
+  }
+}

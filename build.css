@@ -1,0 +1,70 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: antiquewhite;
+}
+
+html {
+  background-image: url("fond.jpeg");
+  animation: animback 25s ease infinite;
+}
+
+@keyframes animback {
+  0% {
+    background-position: 10% 50%;
+  }
+  25% {
+    background-position: 50% 75%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  75% {
+    background-position: 75% 75%;
+  }
+  100% {
+    background-position: 10% 50%;
+  }
+}
+body {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas: "logoAfter logoInit ." "nav content content";
+}
+
+h1 {
+  margin: 5% 0;
+  font-size: 50px;
+}
+
+#logo {
+  grid-area: logoInit;
+  transition: ease-in 0.3s;
+  top: 10px;
+  width: 70%;
+  margin: auto;
+  position: static;
+}
+
+main {
+  grid-area: content;
+  margin-right: 1%;
+}
+
+#navbar {
+  grid-area: nav;
+  position: sticky;
+  top: 35%;
+  align-self: start;
+  margin-left: 4%;
+}
+#navbar a {
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=build.css.map */

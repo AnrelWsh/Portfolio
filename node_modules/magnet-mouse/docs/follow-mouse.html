@@ -1,0 +1,40 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Follow mouse - Magnet mouse</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/demo.css">
+    <style type="text/css">
+        .follow {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 25px;
+            height: 25px;
+            background-color: #f0d647;
+            border-radius: 100%;
+            transition: transform .1s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="block">
+        <a href="#" class="magnet">Magnet mouse</a>
+    </div>
+    <div class="follow"></div>
+
+    <script src="assets/js/magnet-mouse.js"></script>
+    <script>
+      let mm = new MagnetMouse({
+        magnet: {
+          element: '.magnet',
+        },
+        follow: {
+          element: '.follow'
+        }
+      });
+
+      mm.init();
+    </script>
+</body>
+</html>
