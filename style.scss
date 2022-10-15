@@ -6,7 +6,7 @@
   color: antiquewhite;
 }
 html{
-  background-image: url("fond.jpeg");
+  background-image: url("img/fond.jpeg");
   animation: animback 25s ease infinite;
 }
 
@@ -63,4 +63,18 @@ main{
     text-transform: uppercase;
     text-decoration: none
   }
+}
+
+.magnet {
+  display: inline-block;
+  padding: 20px;
+  border-radius: 100px;
+  color: white;
+  background-color: #0040BF;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  transition: all .5s ease;
+}
+.magnet-mouse-active {
+  background-color: #000000;
 }

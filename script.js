@@ -1,4 +1,6 @@
- window.onscroll = function() {scrollFunction()};
+//import MagnetMouse from 'magnet-mouse'
+
+window.onscroll = function() {scrollFunction()};
 const logoGif = document.getElementById("logo")
 function scrollFunction() {
   if (document.documentElement.scrollTop >= 100) {
@@ -15,3 +17,10 @@ function scrollFunction() {
     
   }
 }
+let mm = new MagnetMouse({
+  magnet: {
+    element: '.magnet'
+  }
+});
+
+mm.init();
