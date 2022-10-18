@@ -6,11 +6,6 @@
   color: antiquewhite;
 }
 
-html {
-  background-image: url("img/fond.jpeg");
-  animation: animback 25s ease infinite;
-}
-
 @keyframes animback {
   0% {
     background-position: 10% 50%;
@@ -28,21 +23,92 @@ html {
     background-position: 10% 50%;
   }
 }
-.slide-titre {
+html {
+  background-image: url("img/fond.jpeg");
+  animation: animback 25s ease infinite;
+}
+
+main p {
+  font-family: "Ubuntu", "Segoe UI";
+  font-size: 30px;
+}
+
+#logo {
+  transition: ease-in 0.3s;
+  margin: 0 35%;
+}
+
+.slide-title {
   margin: 5% 0;
   font-size: 100px;
   opacity: 0.5;
   font-weight: 900;
   letter-spacing: 1%;
 }
-.slide-titre-reverse {
+.slide-title-reverse {
   transform: rotate(180deg);
   line-height: 2vh;
 }
 
-#logo {
-  transition: ease-in 0.3s;
-  margin: 0 35%;
+.sep {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sep-line {
+  height: 4px;
+  width: 20vw;
+  background-color: #d1d0c3;
+}
+.sep img {
+  width: 10vw;
+  margin: 0 3vw;
+}
+
+h2 {
+  font-size: 80px;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 3%;
+}
+
+.me-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5vw;
+}
+.me-txt {
+  padding: 5vw;
+}
+.me-txt p {
+  padding: 1vw;
+}
+
+.skills {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: ". fe ." "adobe title other" ". be .";
+}
+.skills h2 {
+  grid-area: title;
+}
+.skills h3 {
+  font-size: 40px;
+}
+.skills #fe {
+  grid-area: fe;
+}
+.skills #be {
+  grid-area: be;
+}
+.skills #adobe {
+  grid-area: adobe;
+}
+.skills #other {
+  grid-area: other;
 }
 
 .magnet {
@@ -58,6 +124,13 @@ html {
 
 .magnet-mouse-active {
   background-color: #000000;
+}
+
+.zoom {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  place-items: center;
 }
 
 /*# sourceMappingURL=build.css.map */
