@@ -28,42 +28,24 @@ html{
   }
 }
 
-body{
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: auto auto;
-  grid-template-areas: "logoAfter logoInit ."
-                       "nav content content";
-}
-h1{
+.slide-titre{
   margin: 5% 0;
-  font-size: 50px;
-}
-#logo{
-  grid-area: logoInit;
-  transition: ease-in 0.3s;
-  top: 10px;
-  width : 70%;
-  margin : auto;
-  position : static;
-}
-main{
-  grid-area: content;
-  margin-right: 1%;
-}
-#navbar{
-  grid-area: nav;
-  position: sticky;
-  top: 35%;
-  align-self: start;
-  margin-left: 4%;
+  font-size: 100px;
+  opacity: 0.5;
+  font-weight: 900;
+  letter-spacing: 1%;
 
-  a{
-    font-weight: bold;
-    text-transform: uppercase;
-    text-decoration: none
+  &-reverse{
+    transform: rotate(180deg);
+    line-height: 2vh;
   }
 }
+#logo{
+  transition: ease-in 0.3s;
+  margin:0 35%;
+}
+
+
 
 .magnet {
   display: inline-block;
