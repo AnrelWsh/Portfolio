@@ -19,6 +19,134 @@ let mm = new MagnetMouse({
 mm.init();
 
 
+var skillsSec = document.getElementById("skills")
+
+const frontEnd = document.getElementById("fe")
+const backEnd = document.getElementById("be")
+const adobeSkill = document.getElementById("adobe")
+const otherSkill = document.getElementById("other")
+
+const frontContent = document.getElementById("content-fe")
+const backContent = document.getElementById("content-be")
+const adobeContent = document.getElementById("content-adobe")
+const otherContent = document.getElementById("content-other")
+
+function reinitSkills() {
+  skillsSec.classList.remove("skills-init")
+  skillsSec.classList.add("skills-clicked")
+
+  frontEnd.classList.remove("magnet")
+  backEnd.classList.remove("magnet")
+  adobeSkill.classList.remove("magnet")
+  otherSkill.classList.remove("magnet")
+
+  frontEnd.classList.remove("magnet-mouse-active")
+  backEnd.classList.remove("magnet-mouse-active")
+  adobeSkill.classList.remove("magnet-mouse-active")
+  otherSkill.classList.remove("magnet-mouse-active")
+
+  frontEnd.classList.remove("skills-title")
+  backEnd.classList.remove("skills-title")
+  adobeSkill.classList.remove("skills-title")
+  otherSkill.classList.remove("skills-title")
+
+  frontEnd.classList.remove("skills-selected")
+  backEnd.classList.remove("skills-selected")
+  adobeSkill.classList.remove("skills-selected")
+  otherSkill.classList.remove("skills-selected")
+}
+
+frontEnd.addEventListener('click', () => {
+  reinitSkills()
+
+  otherSkill.classList.add("skills-title")
+  backEnd.classList.add("skills-title")
+  adobeSkill.classList.add("skills-title")
+  frontEnd.classList.add("skills-selected")
+
+  backContent.style.display = "none"
+  otherContent.style.display = "none"
+  adobeContent.style.display = "none"
+  frontContent.style.display = "grid"
+
+  frontEnd.style.gridArea = "selected"
+  backEnd.style.gridArea = "skill1"
+  adobeSkill.style.gridArea = "skill2"
+  otherSkill.style.gridArea = "skill3"
+})
+
+backEnd.addEventListener('click', () => {
+  reinitSkills()
+
+  frontEnd.classList.add("skills-title")
+  otherSkill.classList.add("skills-title")
+  adobeSkill.classList.add("skills-title")
+  backEnd.classList.add("skills-selected")
+
+  frontContent.style.display = "none"
+  otherContent.style.display = "none"
+  adobeContent.style.display = "none"
+  backContent.style.display = "grid"
+  
+  backEnd.style.gridArea = "selected"
+  frontEnd.style.gridArea = "skill1"
+  adobeSkill.style.gridArea = "skill2"
+  otherSkill.style.gridArea = "skill3"
+})
+
+adobeSkill.addEventListener('click', () => {
+  reinitSkills()
+
+  frontEnd.classList.add("skills-title")
+  backEnd.classList.add("skills-title")
+  otherSkill.classList.add("skills-title")
+  adobeSkill.classList.add("skills-selected")
+
+  frontContent.style.display = "none"
+  otherContent.style.display = "none"
+  backContent.style.display = "none"
+  adobeContent.style.display = "grid"
+  
+  adobeSkill.style.gridArea = "selected"
+  frontEnd.style.gridArea = "skill1"
+  backEnd.style.gridArea = "skill2"
+  otherSkill.style.gridArea = "skill3"
+})
+
+otherSkill.addEventListener('click', () => {
+  reinitSkills()
+
+  frontEnd.classList.add("skills-title")
+  backEnd.classList.add("skills-title")
+  adobeSkill.classList.add("skills-title")
+  otherSkill.classList.add("skills-selected")
+  
+
+  frontContent.style.display = "none"
+  adobeContent.style.display = "none"
+  backContent.style.display = "none"
+  otherContent.style.display = "grid"
+  
+  otherSkill.style.gridArea = "selected"
+  frontEnd.style.gridArea = "skill1"
+  backEnd.style.gridArea = "skill2"
+  adobeSkill.style.gridArea = "skill3"
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*const zoomElement = document.querySelector('.zoom')
 const afterZoomElement = document.querySelector('.afterzoom')
 const imgElement = document.querySelector('#imgh')

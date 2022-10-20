@@ -1,3 +1,5 @@
+@use 'mixins';
+
 *{
   padding: 0;
   margin: 0;
@@ -39,10 +41,9 @@ main{
 }
 .slide-title{
   margin: 5% 0;
-  font-size: 100px;
+  font-size: 90px;
   opacity: 0.5;
   font-weight: 900;
-  letter-spacing: 1%;
 
   &-reverse{
     transform: rotate(180deg);
@@ -88,8 +89,9 @@ h2{
   }
 }
 
-.skills{
+.skills-init{
   display: grid;
+  align-items: center;
   justify-items: center;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto auto auto;
@@ -103,33 +105,134 @@ h2{
   
   h3{
     font-size: 40px;
+    margin: 3vw;
   }
 
   #fe{
     grid-area: fe;
+    &::after{
+      content: "⯆";
+    }
   }
   #be{
     grid-area: be;
+    &::after{
+      content: "⯆";
+    }
   }
   #adobe{
     grid-area: adobe;
+    &::after{
+      content: "⯆";
+    }
   }
   #other{
     grid-area: other;
+    &::after{
+      content: "⯆";
+    }
   }
 }
+
+.skills-clicked{
+  transition: ease-in-out 500ms;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:"title . ."
+                      "selected content content"
+                      "skill1 skill2 skill3";
+  h2{
+    grid-area: title;
+  }
+
+  &-content{
+    grid-area: content;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:"logo1 . logo2"
+                        ". logo3 ."
+                        "logo4 . logo5";
+    gap: 2%;
+    margin: 5%;
+
+    img{
+      width: 10vw;
+      object-fit: cover;
+    }
+
+    .logo1{
+      grid-area: logo1;
+    }
+    .logo2{
+      grid-area: logo2;
+    }
+    .logo3{
+      grid-area: logo3;
+    }
+    .logo4{
+      grid-area: logo4;
+    }
+    .logo5
+    {
+      grid-area: logo5;
+    }
+
+  }
+}
+
+#content-fe{
+  display: none;
+}
+#content-be{
+  display: none;
+}
+#content-adobe{
+  display: none;
+}
+#content-other{
+  display: none;
+}
+
+
+
+
 .magnet {
-  display: inline-block;
+  font-size: 30px;
+  margin: 5%;
   padding: 20px;
   border-radius: 100px;
-  color: white;
-  background-color: #0040BF;
-  transform-style: preserve-3d;
-  backface-visibility: hidden;
-  transition: all .5s ease;
+  background-color: #6600bf;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  
 }
 .magnet-mouse-active {
-  background-color: #000000;
+  background-color: antiquewhite;
+  color: #6600bf;
+}
+
+.skills-title{
+  font-size: 30px;
+  margin: 5%;
+  padding: 20px;
+  border-radius: 100px;
+  background-color: antiquewhite;
+  color: #6600bf;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.skills-selected{
+  font-size: 40px;
+  background-color: none;
+
+  &::after{
+    content: "▶";
+  }
 }
 
 
@@ -140,4 +243,16 @@ h2{
   place-items: center;
 }
 
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: antiquewhite;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #570A57;
+}
 

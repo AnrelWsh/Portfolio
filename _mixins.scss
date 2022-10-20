@@ -1,0 +1,15 @@
+@mixin skills-inner(){
+    transition: ease-in-out 500ms;
+    padding: 4vh 4vw;
+    background-color: ivory;
+    font-size: 20px;
+    color: #251A06;
+    text-decoration: none;
+
+    &:hover{
+        background-color: #ED1D24;
+        color: ivory;
+        transition: ease-in-out 500ms;
+        border-radius: 25px;
+    }
+}

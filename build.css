@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   padding: 0;
   margin: 0;
@@ -40,10 +41,9 @@ main p {
 
 .slide-title {
   margin: 5% 0;
-  font-size: 100px;
+  font-size: 90px;
   opacity: 0.5;
   font-weight: 900;
-  letter-spacing: 1%;
 }
 .slide-title-reverse {
   transform: rotate(180deg);
@@ -85,45 +85,135 @@ h2 {
   padding: 1vw;
 }
 
-.skills {
+.skills-init {
   display: grid;
+  align-items: center;
   justify-items: center;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto auto auto;
   grid-template-areas: ". fe ." "adobe title other" ". be .";
 }
-.skills h2 {
+.skills-init h2 {
   grid-area: title;
 }
-.skills h3 {
+.skills-init h3 {
   font-size: 40px;
+  margin: 3vw;
 }
-.skills #fe {
+.skills-init #fe {
   grid-area: fe;
 }
-.skills #be {
+.skills-init #fe::after {
+  content: "⯆";
+}
+.skills-init #be {
   grid-area: be;
 }
-.skills #adobe {
+.skills-init #be::after {
+  content: "⯆";
+}
+.skills-init #adobe {
   grid-area: adobe;
 }
-.skills #other {
+.skills-init #adobe::after {
+  content: "⯆";
+}
+.skills-init #other {
   grid-area: other;
+}
+.skills-init #other::after {
+  content: "⯆";
+}
+
+.skills-clicked {
+  transition: ease-in-out 500ms;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "title . ." "selected content content" "skill1 skill2 skill3";
+}
+.skills-clicked h2 {
+  grid-area: title;
+}
+.skills-clicked-content {
+  grid-area: content;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "logo1 . logo2" ". logo3 ." "logo4 . logo5";
+  gap: 2%;
+  margin: 5%;
+}
+.skills-clicked-content img {
+  width: 10vw;
+  object-fit: cover;
+}
+.skills-clicked-content .logo1 {
+  grid-area: logo1;
+}
+.skills-clicked-content .logo2 {
+  grid-area: logo2;
+}
+.skills-clicked-content .logo3 {
+  grid-area: logo3;
+}
+.skills-clicked-content .logo4 {
+  grid-area: logo4;
+}
+.skills-clicked-content .logo5 {
+  grid-area: logo5;
+}
+
+#content-fe {
+  display: none;
+}
+
+#content-be {
+  display: none;
+}
+
+#content-adobe {
+  display: none;
+}
+
+#content-other {
+  display: none;
 }
 
 .magnet {
-  display: inline-block;
+  font-size: 30px;
+  margin: 5%;
   padding: 20px;
   border-radius: 100px;
-  color: white;
-  background-color: #0040BF;
-  transform-style: preserve-3d;
-  backface-visibility: hidden;
-  transition: all 0.5s ease;
+  background-color: #6600bf;
+  transition: all 0.2s ease;
+  cursor: pointer;
 }
 
 .magnet-mouse-active {
-  background-color: #000000;
+  background-color: antiquewhite;
+  color: #6600bf;
+}
+
+.skills-title {
+  font-size: 30px;
+  margin: 5%;
+  padding: 20px;
+  border-radius: 100px;
+  background-color: antiquewhite;
+  color: #6600bf;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.skills-selected {
+  font-size: 40px;
+  background-color: none;
+}
+.skills-selected::after {
+  content: "▶";
 }
 
 .zoom {
@@ -131,6 +221,19 @@ h2 {
   width: 100%;
   display: grid;
   place-items: center;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: antiquewhite;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #570A57;
 }
 
 /*# sourceMappingURL=build.css.map */
