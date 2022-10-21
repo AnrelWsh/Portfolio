@@ -1,15 +1,39 @@
-@mixin skills-inner(){
-    transition: ease-in-out 500ms;
-    padding: 4vh 4vw;
-    background-color: ivory;
-    font-size: 20px;
-    color: #251A06;
-    text-decoration: none;
+@mixin projectCard($flexdir){
+    display: flex;
+    flex-direction: $flexdir;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+    margin: 0 4%;
+    padding: 1% 1%;
 
-    &:hover{
-        background-color: #ED1D24;
-        color: ivory;
-        transition: ease-in-out 500ms;
+    img{
         border-radius: 25px;
+        border: solid 4px black;
+    }
+    #tilt {
+        display: block;
+        height: 20vw;
+        width: 80vw;
+        background-color: grey;
+        margin: 0 auto;
+        transition: box-shadow 0.1s, transform 0.1s;
+        background-image: url(http://unsplash.it/300/200);
+        background-size: cover;
+        border-radius: 25px;
+        border: solid 4px black;
+    }
+
+    .project-txt{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h4{
+            font-size: 45px;
+        }
+        p{
+            margin: 2%;
+        }
     }
 }
