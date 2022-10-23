@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "gsap": "^3.11.3",
+    "intersection-observer": "^0.12.2",
     "magnet-mouse": "github:fluffy-factory/magnet-mouse"
   }
 }

@@ -11,23 +11,28 @@
         border-radius: 25px;
         border: solid 4px black;
     }
-    #tilt {
-        display: block;
-        height: 20vw;
-        width: 80vw;
-        background-color: grey;
+    .project-card {
+        height: 50vh;
+        width: 100%;
         margin: 0 auto;
         transition: box-shadow 0.1s, transform 0.1s;
-        background-image: url(http://unsplash.it/300/200);
-        background-size: cover;
+        background-size: contain;
+        background-repeat: round;
         border-radius: 25px;
         border: solid 4px black;
+        transform: translateZ(0);
+      
+        &:after {
+            content: " ";
+            width: 100%;
+            height: 10px;
+        }
     }
-
     .project-txt{
         display: flex;
         flex-direction: column;
         align-items: center;
+        width: 100%;
 
         h4{
             font-size: 45px;

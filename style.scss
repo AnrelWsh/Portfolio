@@ -208,14 +208,31 @@ h2{
 
   .project1{
     @include mixins.projectCard(row);
+    .project-card{
+      background-image: url(img/prjt-rueil.jpg)
+    }
   }
   .project2{
     @include mixins.projectCard(row-reverse);
+    .project-card{
+      background-image: url(img/prjt-asc.jpg)
+    }
   }
 }
 
 
 
+.reveal{
+  opacity: 0;
+  transform: translateY(-50px);
+  transform: translateX(-100px);
+}
+.reveal-visible{
+  opacity: 1;
+  transform: translateY(0);
+  transform: translateX(0);
+  transition: 1s cubic-bezier(.46,.22,.21,1);
+}
 
 
 
