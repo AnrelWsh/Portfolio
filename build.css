@@ -182,6 +182,86 @@ h2 {
   display: none;
 }
 
+footer {
+  background-color: #6600bf;
+  clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
+  height: 51vh;
+  margin-top: 8vh;
+  padding: 2%;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas: "titre sous-titre sous-titre" "cv gifFoot monInsta";
+}
+@media screen and (max-width: 1000px) {
+  footer {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas: "titre" "sous-titre" "cv" "gifFoot" "monInsta";
+    gap: 20px;
+  }
+}
+footer h2 {
+  grid-area: titre;
+  font-size: 60px;
+  font-weight: 900;
+  color: antiquewhite;
+  padding: 4vh 2vw;
+}
+footer h3 {
+  grid-area: sous-titre;
+  color: antiquewhite;
+}
+@media screen and (max-width: 1000px) {
+  footer h3 {
+    text-align: center;
+  }
+}
+footer #cv {
+  grid-area: cv;
+  transition: ease-in-out 500ms;
+  padding: 4vh 4vw;
+  background-color: antiquewhite;
+  font-size: 20px;
+  color: #6600bf;
+  text-decoration: none;
+}
+footer #cv:hover {
+  background-color: #ED1D24;
+  color: ivory;
+  transition: ease-in-out 500ms;
+  border-radius: 25px;
+}
+footer #gifFoot {
+  grid-area: gifFoot;
+  width: 60%;
+}
+footer #monInsta {
+  grid-area: monInsta;
+  transition: ease-in-out 500ms;
+  padding: 4vh 4vw;
+  background-color: antiquewhite;
+  font-size: 20px;
+  color: #6600bf;
+  text-decoration: none;
+}
+footer #monInsta:hover {
+  background-color: #ED1D24;
+  color: ivory;
+  transition: ease-in-out 500ms;
+  border-radius: 25px;
+}
+footer h4 {
+  color: #6600bf;
+}
+@media screen and (max-width: 1117px) {
+  footer h4 {
+    font-size: 15px;
+  }
+}
+
 .projects {
   display: flex;
   flex-direction: column;

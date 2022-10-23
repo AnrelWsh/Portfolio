@@ -42,3 +42,25 @@
         }
     }
 }
+
+@mixin btnFooter(){
+    transition: ease-in-out 500ms;
+    padding: 4vh 4vw;
+    background-color: antiquewhite;
+    font-size: 20px;
+    color: #6600bf;
+    text-decoration: none;
+
+    &:hover{
+        background-color: #ED1D24;
+        color: ivory;
+        transition: ease-in-out 500ms;
+        border-radius: 25px;
+    }
+}
+
+@mixin responsive($width){
+    @media screen and (max-width:$width) {
+        @content;
+    }
+}
