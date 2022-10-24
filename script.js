@@ -125,6 +125,8 @@ otherSkill.addEventListener('click', () => {
   adobeSkill.style.gridArea = "skill3"
 })
 
+
+
 const ratio = .3
 const options = {
   root: null,
@@ -135,6 +137,12 @@ const intersect = function (entries, observer){
   entries.forEach(function (entry){
     if (entry.intersectionRatio > ratio) {
       entry.target.classList.add("reveal-visible")
+      document.addEventListener("mousemove", function(e) {  
+        var ax = -(self.innerWidth/2- e.pageX)/20
+        var ay = (self.innerHeight/10- e.pageY)/10
+        document.getElementById("project-card1").style.transform = "rotateY("+ax+"deg) rotateX("+ay+"deg)"
+        document.getElementById("project-card2").style.transform = "rotateY("+ax+"deg) rotateX("+ay+"deg)"
+      })
       observer.unobserve(entry.target)
     }  
   
@@ -148,16 +156,83 @@ document.querySelectorAll('.reveal').forEach(function (r){
 
 
 
-document.addEventListener("mousemove", function(e) {  
-  var ax = -(self.innerWidth/2- e.pageX)/20
-  var ay = (self.innerHeight/10- e.pageY)/10
-  document.getElementById("project-card1").style.transform = "rotateY("+ax+"deg) rotateX("+ay+"deg)"
+gsap.registerPlugin(ScrollTrigger);
+const slideTitleUp = document.querySelectorAll('.slide-title')
+const slideTitleDown = document.querySelectorAll('.slide-title-reverse')
+
+
+
+slideTitleUp.forEach(el => {
+  gsap.to(el, {
+      scrollTrigger: {
+      trigger: el,
+      start: "top bottom",
+      end: "top",
+      scrub: 1,
+      toggleActions : "play"
+      },
+      x: -200,
+  })
 })
-document.addEventListener("mousemove", function(e) {  
-  var ax = -(self.innerWidth/2- e.pageX)/20
-  var ay = (self.innerHeight/10- e.pageY)/10
-  document.getElementById("project-card2").style.transform = "rotateY("+ax+"deg) rotateX("+ay+"deg)"
+slideTitleDown.forEach(el => {
+  gsap.to(el, {
+      scrollTrigger: {
+      trigger: el,
+      start: "top bottom",
+      end: "top",
+      scrub: 1,
+      toggleActions : "play"
+      },
+      x: 300,
+  })
 })
+
+
+  gsap.to("#skilz", {
+      scrollTrigger: {
+      trigger: "#skilz",
+      scrub: 1,
+      end: "-50 top",
+      toggleActions : "play"
+      },
+      y: 170,
+      x: 500,
+  })
+
+
+let imgMe = document.getElementById("imgMe")
+const me1 = document.getElementById("me1")
+const me2 = document.getElementById("me2")
+const me3 = document.getElementById("me3")
+
+
+me1.addEventListener('mouseover', () => {
+    imgMe.src = "img/logoIIM.png" 
+})
+me2.addEventListener('mouseover', () => {
+    imgMe.src = "img/workstudy.jpg" 
+})
+me3.addEventListener('mouseover', () => {
+    imgMe.src = "img/moi.gif"
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
