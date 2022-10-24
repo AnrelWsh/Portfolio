@@ -125,6 +125,26 @@ otherSkill.addEventListener('click', () => {
   adobeSkill.style.gridArea = "skill3"
 })
 
+const btnBurger = document.getElementById('menu-btn')
+const btnBurgerOpen = document.getElementById('menu-btn-open')
+const menuBurger = document.getElementById('menu')
+
+btnBurger.addEventListener('click', () => {
+  gsap.to("#menu", {
+    scrollTrigger: {
+    trigger: "#skilz",
+    scrub: 1,
+    end: "-50 top",
+    toggleActions : "play"
+    },
+    y: 170,
+    x: 500,
+})
+})
+btnBurgerOpen.addEventListener('click', () => {
+  menuBurger.style.opacity = "0"
+  menuBurger.style.display = "none"
+})
 
 
 const ratio = .3
