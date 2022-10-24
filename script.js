@@ -125,26 +125,33 @@ otherSkill.addEventListener('click', () => {
   adobeSkill.style.gridArea = "skill3"
 })
 
+
+
+
+
 const btnBurger = document.getElementById('menu-btn')
-const btnBurgerOpen = document.getElementById('menu-btn-open')
 const menuBurger = document.getElementById('menu')
+const nOverflow = document.getElementById('html')
 
 btnBurger.addEventListener('click', () => {
-  gsap.to("#menu", {
-    scrollTrigger: {
-    trigger: "#skilz",
-    scrub: 1,
-    end: "-50 top",
-    toggleActions : "play"
-    },
-    y: 170,
-    x: 500,
+  if (menuBurger.style.display == "none") {
+    menuBurger.style.display = "block"
+    btnBurger.classList.remove("menu-btn-close")
+    btnBurger.classList.add("menu-btn-open")
+    nOverflow.style.overflowY = "hidden"
+  } else{
+    menuBurger.style.display = "none"
+    btnBurger.classList.remove("menu-btn-open")
+    btnBurger.classList.add("menu-btn-close")
+    nOverflow.style.overflowY = "visible"
+  }
 })
-})
-btnBurgerOpen.addEventListener('click', () => {
-  menuBurger.style.opacity = "0"
-  menuBurger.style.display = "none"
-})
+
+
+
+
+
+
 
 
 const ratio = .3
