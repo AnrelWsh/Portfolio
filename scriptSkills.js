@@ -80,18 +80,6 @@ slideTitleDown.forEach(el => {
   })
 })
 
-/**SKILLS TITLE MOVING 
-gsap.to("#skilz", {
-  scrollTrigger: {
-  trigger: "#skilz",
-  scrub: 1,
-  end: "bottom",
-  toggleActions: "play none none none",
-  },
-  y: 170,
-  x: 500,
-})*/
-
 /**INIT MAGNET MOUSE API */
 
 let mm = new MagnetMouse({
