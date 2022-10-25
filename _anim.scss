@@ -1,0 +1,88 @@
+@mixin animHover(){
+    background-position: right center;
+    background-color:#6600bf;
+    background-image:linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 40%, rgba(255,255,255,.7) 100%);
+    background-repeat:no-repeat;
+    background-size: 200% 100%; 
+    transition:background-size 1s, background-color 1s;
+}
+
+@mixin selectMenu(){
+    color: #570A57;
+    border: solid #0000;
+    border-width: 3px 3px 23px 23px;
+    background: conic-gradient(at left 20px bottom 20px,#0000 90deg, rgb(255 255 255 /0.3) 0 225deg,rgb(255 255 255 /0.6) 0) border-box,
+                conic-gradient(at left 23px bottom 23px,#0000 90deg, #570A57 0) 0 100%/calc(100% - 3px) calc(100% - 3px) border-box;
+    transform: translate(calc(20px /-1),20px );
+    clip-path: polygon(20px  0%, 20px  0%, 100% 0%, 100% calc(100% - 20px ), 100% calc(100% - 20px ), 20px  calc(100% - 20px ));
+    transition: 0.5s;
+  
+    &:hover {
+    transform: translate(0,0);
+    clip-path: polygon(0% 20px , 20px  0%, 100% 0%, 100% calc(100% - 20px ), calc(100% - 20px ) 100%, 0% 100%);
+    }
+  
+    &:active {
+      color:#6600bf; 
+      transition: 0.3 ease-in;
+    }
+}
+
+@mixin slideTitle(){
+    margin: 5% 0;
+    font-size: 90px;
+    opacity: 0.5;
+    font-weight: 900;
+  
+    &-reverse{
+      transform: rotate(180deg);
+      line-height: 2vh;
+    }
+}
+
+@mixin sep(){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    &-line{
+      height: 4px;
+      width: 20vw;
+      background-color: #d1d0c3;
+    }
+    img{
+    width: 10vw;
+    margin: 0 3vw;
+    }
+}
+
+@mixin magnet(){
+    display: inline-block;
+    font-size: 30px;
+    margin: 5%;
+    padding: 20px;
+    border-radius: 100px;
+    background-color: #6600bf;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    transition: all 0.2s ease;
+    cursor: pointer;
+
+    &-mouse-active {
+        background-color: antiquewhite;
+        color: #6600bf;
+    }
+}
+
+@mixin scrollbar(){
+    width: 15px;
+
+    &-thumb {
+      border-radius: 10px;
+      background-color: antiquewhite;
+    }
+  
+    &-track {
+      background-color: #570A57;
+    }
+}

@@ -1,3 +1,7 @@
+@mixin tréMenu($tréWidth){
+    width: $tréWidth;
+}
+
 @mixin projectCard($flexdir){
     display: flex;
     flex-direction: $flexdir;
@@ -12,7 +16,7 @@
         border: solid 4px black;
     }
     .project-card {
-        height: 50vh;
+        height: 27vw;
         width: 100%;
         margin: 0 auto;
         transition: box-shadow 0.1s, transform 0.1s;
@@ -21,6 +25,7 @@
         border-radius: 25px;
         border: solid 4px black;
         transform: translateZ(0);
+        margin: 3%;
       
         &:after {
             content: " ";
@@ -38,7 +43,10 @@
             font-size: 45px;
         }
         p{
-            margin: 2%;
+            margin: 3%;
+        }
+        .magnet{
+            margin: 0;
         }
     }
 }
@@ -48,23 +56,15 @@
     padding: 4vh 4vw;
     background-color: antiquewhite;
     font-size: 20px;
-    color: #6600bf;
     text-decoration: none;
 
-    &:hover{
-        background-color: #ED1D24;
-        color: ivory;
-        transition: ease-in-out 500ms;
-        border-radius: 25px;
+    h4{
+        font-family: 'Ubuntu', 'Segoe UI';
+        font-size: 25px;
+        color: #570A57;
     }
+    
 }
-
-
-@mixin tréMenu($tréWidth){
-    width: $tréWidth;
-}
-
-
 
 @mixin responsive($width){
     @media screen and (max-width:$width) {

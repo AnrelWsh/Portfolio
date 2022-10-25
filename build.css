@@ -164,14 +164,16 @@ html {
   transition: 0.3 ease-in;
 }
 
-main p {
-  font-family: "Ubuntu", "Segoe UI";
-  font-size: 30px;
+.intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 10% auto;
 }
-
-#logo {
-  transition: ease-in 0.3s;
-  margin: 0 35%;
+.intro h1 {
+  font-size: 100px;
+  width: 47vw;
+  font-family: "Ubuntu", "Segoe UI";
 }
 
 .slide-title {
@@ -183,6 +185,11 @@ main p {
 .slide-title-reverse {
   transform: rotate(180deg);
   line-height: 2vh;
+}
+
+main p {
+  font-family: "Ubuntu", "Segoe UI";
+  font-size: 30px;
 }
 
 .sep {
@@ -207,6 +214,24 @@ h2 {
   letter-spacing: 3%;
 }
 
+.magnet {
+  display: inline-block;
+  font-size: 30px;
+  margin: 5%;
+  padding: 20px;
+  border-radius: 100px;
+  background-color: #6600bf;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.magnet-mouse-active {
+  background-color: antiquewhite;
+  color: #6600bf;
+}
+
+/*------------------------------------ME-----------------------------*/
 .me-content {
   display: flex;
   align-items: center;
@@ -239,6 +264,10 @@ h2 {
   grid-template-rows: auto auto auto;
   grid-template-areas: ". fe ." "adobe title other" ". be .";
 }
+.skills-init h2 {
+  grid-area: title;
+  margin: 16% 0;
+}
 .skills-init h3 {
   font-size: 40px;
   margin: 3vw;
@@ -268,6 +297,8 @@ h2 {
   content: "⯆";
 }
 
+/*------------------------------------ME-----------------------------*/
+/*------------------------------------SKILLS-----------------------------*/
 .skills-clicked {
   transition: ease-in-out 500ms;
   display: grid;
@@ -325,10 +356,155 @@ h2 {
   display: none;
 }
 
+.skills-title {
+  font-size: 30px;
+  margin: 5%;
+  padding: 20px;
+  border-radius: 100px;
+  background-color: #6600bf;
+  color: antiquewhite;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.skills-title:hover {
+  background-color: antiquewhite;
+  color: #6600bf;
+  transition: all 0.5s ease;
+  transform: scale(1.3);
+}
+
+.skills-selected {
+  font-size: 40px;
+  background-color: none;
+  color: #6600bf;
+  background-color: antiquewhite;
+}
+.skills-selected::after {
+  content: "▶";
+}
+
+/*------------------------------------SKILLS-----------------------------*/
+/*------------------------------------PROJECTS-----------------------------*/
+.projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.projects .project1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+  margin: 0 4%;
+  padding: 1% 1%;
+}
+.projects .project1 img {
+  border-radius: 25px;
+  border: solid 4px black;
+}
+.projects .project1 .project-card {
+  height: 27vw;
+  width: 100%;
+  margin: 0 auto;
+  transition: box-shadow 0.1s, transform 0.1s;
+  background-size: contain;
+  background-repeat: round;
+  border-radius: 25px;
+  border: solid 4px black;
+  transform: translateZ(0);
+  margin: 3%;
+}
+.projects .project1 .project-card:after {
+  content: " ";
+  width: 100%;
+  height: 10px;
+}
+.projects .project1 .project-txt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.projects .project1 .project-txt h4 {
+  font-size: 45px;
+}
+.projects .project1 .project-txt p {
+  margin: 3%;
+}
+.projects .project1 .project-txt .magnet {
+  margin: 0;
+}
+.projects .project1 .project-card {
+  background-image: url(img/prjt-rueil.jpg);
+}
+.projects .project2 {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+  margin: 0 4%;
+  padding: 1% 1%;
+}
+.projects .project2 img {
+  border-radius: 25px;
+  border: solid 4px black;
+}
+.projects .project2 .project-card {
+  height: 27vw;
+  width: 100%;
+  margin: 0 auto;
+  transition: box-shadow 0.1s, transform 0.1s;
+  background-size: contain;
+  background-repeat: round;
+  border-radius: 25px;
+  border: solid 4px black;
+  transform: translateZ(0);
+  margin: 3%;
+}
+.projects .project2 .project-card:after {
+  content: " ";
+  width: 100%;
+  height: 10px;
+}
+.projects .project2 .project-txt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.projects .project2 .project-txt h4 {
+  font-size: 45px;
+}
+.projects .project2 .project-txt p {
+  margin: 3%;
+}
+.projects .project2 .project-txt .magnet {
+  margin: 0;
+}
+.projects .project2 .project-card {
+  background-image: url(img/prjt-asc.jpg);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(-50px);
+  transform: translateX(-100px);
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transform: translateX(0);
+  transition: 1s cubic-bezier(0.46, 0.22, 0.21, 1);
+}
+
+/*------------------------------------PROJECTS-----------------------------*/
 footer {
   background-color: #6600bf;
   clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
-  height: 51vh;
+  height: 100%;
   margin-top: 8vh;
   padding: 2%;
   display: grid;
@@ -368,14 +544,12 @@ footer #cv {
   padding: 4vh 4vw;
   background-color: antiquewhite;
   font-size: 20px;
-  color: #6600bf;
   text-decoration: none;
 }
-footer #cv:hover {
-  background-color: #ED1D24;
-  color: ivory;
-  transition: ease-in-out 500ms;
-  border-radius: 25px;
+footer #cv h4 {
+  font-family: "Ubuntu", "Segoe UI";
+  font-size: 25px;
+  color: #570A57;
 }
 footer #gifFoot {
   grid-area: gifFoot;
@@ -387,174 +561,17 @@ footer #monInsta {
   padding: 4vh 4vw;
   background-color: antiquewhite;
   font-size: 20px;
-  color: #6600bf;
   text-decoration: none;
 }
-footer #monInsta:hover {
-  background-color: #ED1D24;
-  color: ivory;
-  transition: ease-in-out 500ms;
-  border-radius: 25px;
-}
-footer h4 {
-  color: #6600bf;
+footer #monInsta h4 {
+  font-family: "Ubuntu", "Segoe UI";
+  font-size: 25px;
+  color: #570A57;
 }
 @media screen and (max-width: 1117px) {
   footer h4 {
     font-size: 15px;
   }
-}
-
-.projects {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.projects .project1 {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-  gap: 20px;
-  margin: 0 4%;
-  padding: 1% 1%;
-}
-.projects .project1 img {
-  border-radius: 25px;
-  border: solid 4px black;
-}
-.projects .project1 .project-card {
-  height: 50vh;
-  width: 100%;
-  margin: 0 auto;
-  transition: box-shadow 0.1s, transform 0.1s;
-  background-size: contain;
-  background-repeat: round;
-  border-radius: 25px;
-  border: solid 4px black;
-  transform: translateZ(0);
-}
-.projects .project1 .project-card:after {
-  content: " ";
-  width: 100%;
-  height: 10px;
-}
-.projects .project1 .project-txt {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-}
-.projects .project1 .project-txt h4 {
-  font-size: 45px;
-}
-.projects .project1 .project-txt p {
-  margin: 2%;
-}
-.projects .project1 .project-card {
-  background-image: url(img/prjt-rueil.jpg);
-}
-.projects .project2 {
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  justify-content: space-around;
-  gap: 20px;
-  margin: 0 4%;
-  padding: 1% 1%;
-}
-.projects .project2 img {
-  border-radius: 25px;
-  border: solid 4px black;
-}
-.projects .project2 .project-card {
-  height: 50vh;
-  width: 100%;
-  margin: 0 auto;
-  transition: box-shadow 0.1s, transform 0.1s;
-  background-size: contain;
-  background-repeat: round;
-  border-radius: 25px;
-  border: solid 4px black;
-  transform: translateZ(0);
-}
-.projects .project2 .project-card:after {
-  content: " ";
-  width: 100%;
-  height: 10px;
-}
-.projects .project2 .project-txt {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-}
-.projects .project2 .project-txt h4 {
-  font-size: 45px;
-}
-.projects .project2 .project-txt p {
-  margin: 2%;
-}
-.projects .project2 .project-card {
-  background-image: url(img/prjt-asc.jpg);
-}
-
-.reveal {
-  opacity: 0;
-  transform: translateY(-50px);
-  transform: translateX(-100px);
-}
-
-.reveal-visible {
-  opacity: 1;
-  transform: translateY(0);
-  transform: translateX(0);
-  transition: 1s cubic-bezier(0.46, 0.22, 0.21, 1);
-}
-
-.magnet {
-  display: inline-block;
-  font-size: 30px;
-  margin: 5%;
-  padding: 20px;
-  border-radius: 100px;
-  background-color: #6600bf;
-  transform-style: preserve-3d;
-  backface-visibility: hidden;
-  transition: all 0.2s ease;
-  cursor: pointer;
-}
-
-.magnet-mouse-active {
-  background-color: antiquewhite;
-  color: #6600bf;
-}
-
-.skills-title {
-  font-size: 30px;
-  margin: 5%;
-  padding: 20px;
-  border-radius: 100px;
-  background-color: #6600bf;
-  color: antiquewhite;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-.skills-title:hover {
-  background-color: antiquewhite;
-  color: #6600bf;
-  transition: all 0.5s ease;
-  transform: scale(1.3);
-}
-
-.skills-selected {
-  font-size: 40px;
-  background-color: none;
-  color: #6600bf;
-  background-color: antiquewhite;
-}
-.skills-selected::after {
-  content: "▶";
 }
 
 .zoom {
