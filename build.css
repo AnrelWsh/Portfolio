@@ -5,6 +5,7 @@
   box-sizing: border-box;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: antiquewhite;
+  text-decoration: none;
 }
 
 @keyframes animback {
@@ -62,8 +63,8 @@ html {
   cursor: pointer;
 }
 .menu-btn-close div {
-  width: 3vw;
-  height: 1vh;
+  width: 50px;
+  height: 8px;
   margin: 15%;
   background-color: antiquewhite;
   border-radius: 25px;
@@ -77,10 +78,10 @@ html {
   z-index: 4;
 }
 .menu-btn-open div {
-  width: 4vw;
-  height: 1vh;
+  width: 65px;
+  height: 8px;
   margin: 15%;
-  background-color: antiquewhite;
+  background-color: #b99cbc;
   border-radius: 25px;
 }
 .menu-btn-open div:first-child {
@@ -98,27 +99,69 @@ html {
   display: none;
   width: 100vw;
   height: 100vh;
-  background-color: black;
+  background-color: antiquewhite;
   z-index: 3;
   position: fixed;
   top: 0;
   left: 0;
   transition: 1s ease-in;
 }
+#menu .menu-nav {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#menu .menu-nav .sl {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15vw;
+  width: 100vw;
+}
+#menu .menu-nav .sl div {
+  height: 10px;
+  background-color: #570A57;
+}
+#menu .menu-nav .sl #slD1 {
+  width: 25vw;
+}
+#menu .menu-nav .sl #slD2 {
+  width: 26vw;
+}
+#menu .menu-nav .sl #slD3 {
+  width: 22vw;
+}
+#menu .menu-nav .sl:hover div {
+  background-position: right center;
+  background-color: #6600bf;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0.7) 100%);
+  background-repeat: no-repeat;
+  background-size: 200% 100%;
+  transition: background-size 1s, background-color 1s;
+}
+#menu .menu-nav h3 {
+  font-size: 70px;
+  text-transform: uppercase;
+}
 
 .select-menu {
-  color: #1095c1;
+  color: #570A57;
   border: solid rgba(0, 0, 0, 0);
   border-width: 3px 3px 23px 23px;
-  background: conic-gradient(at left 20px bottom 20px, rgba(0, 0, 0, 0) 90deg, rgba(255, 255, 255, 0.3) 0 225deg, rgba(255, 255, 255, 0.6) 0) border-box, conic-gradient(at left 23px bottom 23px, rgba(0, 0, 0, 0) 90deg, #1095c1 0) 0 100%/calc(100% - 3px) calc(100% - 3px) border-box;
+  background: conic-gradient(at left 20px bottom 20px, rgba(0, 0, 0, 0) 90deg, rgba(255, 255, 255, 0.3) 0 225deg, rgba(255, 255, 255, 0.6) 0) border-box, conic-gradient(at left 23px bottom 23px, rgba(0, 0, 0, 0) 90deg, #570A57 0) 0 100%/calc(100% - 3px) calc(100% - 3px) border-box;
   transform: translate(-20px, 20px);
   clip-path: polygon(20px 0%, 20px 0%, 100% 0%, 100% calc(100% - 20px), 100% calc(100% - 20px), 20px calc(100% - 20px));
   transition: 0.5s;
-  width: 10vw;
 }
 .select-menu:hover {
   transform: translate(0, 0);
   clip-path: polygon(0% 20px, 20px 0%, 100% 0%, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0% 100%);
+}
+.select-menu:active {
+  color: #6600bf;
+  transition: 0.3 ease-in;
 }
 
 main p {

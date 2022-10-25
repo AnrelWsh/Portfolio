@@ -49,6 +49,25 @@ slideTitleDown.forEach(el => {
   })
 })
 
+  /*const largeTitle = document.querySelectorAll('.largeTitle')
+
+  if (largeTitle[0]) {
+    largeTitle.forEach((section) => {
+      const title = document.querySelector('.line-0', section)
+
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: section,
+          start: 'top top',
+          end: 'bottom bottom',
+          scrub: true,
+        },
+      })
+
+      tl.to(title, { scale: 0.35 })
+    })
+  }*/
+
 /**CHANGE IMAGE ON HOVER */
 
 let imgMe = document.getElementById("imgMe")

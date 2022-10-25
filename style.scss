@@ -6,6 +6,7 @@
   box-sizing: border-box;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: antiquewhite;
+  text-decoration: none;
 }
 @keyframes animback {
   0%{
@@ -59,8 +60,8 @@ html{
   cursor: pointer;
 
   div{
-    width: 3vw;
-    height: 1vh;
+    width: 50px;
+    height: 8px;
     margin: 15%;
     background-color: antiquewhite;
     border-radius: 25px;
@@ -74,10 +75,10 @@ html{
   z-index: 4;
   
   div{
-    width: 4vw;
-    height: 1vh;
+    width: 65px;
+    height: 8px;
     margin: 15%;
-    background-color: antiquewhite;
+    background-color: #b99cbc;
     border-radius: 25px;
 
     &:first-child {
@@ -96,30 +97,80 @@ html{
   display: none;
   width: 100vw;
   height: 100vh;
-  background-color: black;
+  background-color: antiquewhite;
   z-index: 3;
   position: fixed;
   top: 0;
   left: 0;
   transition: 1s ease-in;
+
+  .menu-nav{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    .sl{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 15vw;
+      width: 100vw;
+
+      div{
+        height: 10px;
+        background-color: #570A57;
+      }
+      #slD1{
+        @include mixins.tréMenu(25vw)
+      }
+      #slD2{
+        @include mixins.tréMenu(26vw)
+      }
+      #slD3{
+        @include mixins.tréMenu(22vw)
+      }
+
+      &:hover div{
+      background-position: right center;
+      background-color:#6600bf;
+      background-image:linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 40%, rgba(255,255,255,.7) 100%);
+      background-repeat:no-repeat;
+      background-size: 200% 100%; 
+      transition:background-size 1s, background-color 1s;
+    } 
+
+    }
+
+
+    h3{
+      font-size: 70px;
+      text-transform: uppercase;
+    }
+  }
 }
 
 
 
 .select-menu {
-  color: #1095c1;
+  color: #570A57;
   border: solid #0000;
-  border-width: 3px 3px calc(20px + 3px) calc(20px + 3px);
+  border-width: 3px 3px 23px 23px;
   background: conic-gradient(at left 20px bottom 20px,#0000 90deg, rgb(255 255 255 /0.3) 0 225deg,rgb(255 255 255 /0.6) 0) border-box,
-              conic-gradient(at left calc(20px + 3px) bottom calc(20px + 3px),#0000 90deg, #1095c1 0) 0 100%/calc(100% - 3px) calc(100% - 3px) border-box;
+              conic-gradient(at left 23px bottom 23px,#0000 90deg, #570A57 0) 0 100%/calc(100% - 3px) calc(100% - 3px) border-box;
   transform: translate(calc(20px /-1),20px );
   clip-path: polygon(20px  0%, 20px  0%, 100% 0%, 100% calc(100% - 20px ), 100% calc(100% - 20px ), 20px  calc(100% - 20px ));
   transition: 0.5s;
-  width: 10vw;
 
   &:hover {
   transform: translate(0,0);
   clip-path: polygon(0% 20px , 20px  0%, 100% 0%, 100% calc(100% - 20px ), calc(100% - 20px ) 100%, 0% 100%);
+  }
+
+  &:active {
+    color:#6600bf; 
+    transition: 0.3 ease-in;
   }
 }
 
