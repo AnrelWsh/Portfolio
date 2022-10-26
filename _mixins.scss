@@ -2,6 +2,12 @@
     width: $tréWidth;
 }
 
+@mixin responsive($width){
+    @media screen and (max-width:$width) {
+        @content;
+    }
+}
+
 @mixin projectCard($flexdir){
     display: flex;
     flex-direction: $flexdir;
@@ -10,6 +16,11 @@
     gap: 20px;
     margin: 0 4%;
     padding: 1% 1%;
+
+    @media screen and (max-width:1200px) {
+        flex-direction: column;
+        margin: 5%;
+    }
 
     img{
         border-radius: 25px;
@@ -26,7 +37,12 @@
         border: solid 4px black;
         transform: translateZ(0);
         margin: 3%;
-      
+
+        @media screen and (max-width:1200px) {
+            width: 70%;
+            height: 35vw;
+        }
+
         &:after {
             content: " ";
             width: 100%;
@@ -64,10 +80,4 @@
         color: #570A57;
     }
     
-}
-
-@mixin responsive($width){
-    @media screen and (max-width:$width) {
-        @content;
-    }
 }

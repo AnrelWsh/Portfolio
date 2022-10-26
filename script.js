@@ -267,6 +267,12 @@ const intersect = function (entries, observer){
         var ay = (self.innerHeight/10- e.pageY)/10
         var ay =- ay + 180
         document.getElementById("project-card1").style.transform = "rotateY("+ax+"deg) rotateX("+ay+"deg)"
+      })
+      document.addEventListener("mousemove", function(e) {  
+        var ax = (self.innerWidth/2- e.pageX)/20
+        var ay = (self.innerHeight/10- e.pageY)/10
+        var ay =+ ay + 90
+        var ay =- ay + 180
         document.getElementById("project-card2").style.transform = "rotateY("+ax+"deg) rotateX("+ay+"deg)"
       })
       observer.unobserve(entry.target)

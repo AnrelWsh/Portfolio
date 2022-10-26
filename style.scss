@@ -157,6 +157,13 @@ html{
     h3{
       font-size: 70px;
       text-transform: uppercase;
+
+      @include mixins.responsive(800px){
+        font-size: 55px;
+      }
+      @include mixins.responsive(620px){
+        font-size: 50px;
+      }
     }
   }
 }
@@ -288,6 +295,12 @@ h2{
       font-size: 50px;
       margin: 5%;
     }
+    @include mixins.responsive(880px){
+      font-size: 45px;
+    }
+    @include mixins.responsive(800px){
+      font-size: 60px;
+    }
   }
   h3{
     font-size: 40px;
@@ -364,8 +377,7 @@ h2{
     margin: 5%;
 
     @include mixins.responsive(800px){
-      margin: 0;
-      gap: 5%;
+      justify-content: center;
     }
 
     img{

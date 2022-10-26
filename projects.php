@@ -25,7 +25,7 @@
           <div class="project-card" id="project-card2"></div>
           <div class="project-txt">
             <h4>Rueil Website</h4>
-            <p>This website was made to make people discover the city of Rueil-MAlmaison. A beautiful city with its plains, the Seine and its wild grid displays !</p>
+            <p>This website was made to make people discover the city of Rueil-Malmaison. A beautiful city with its plains, the Seine and its wild grid displays !</p>
             <a href="https://anrelwsh.github.io/ProjetRueil/"><p class="magnet">See Project</p></a>
           </div>
         </div>

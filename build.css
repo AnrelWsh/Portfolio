@@ -153,6 +153,16 @@ html {
   font-size: 70px;
   text-transform: uppercase;
 }
+@media screen and (max-width: 800px) {
+  #menu .menu-nav h3 {
+    font-size: 55px;
+  }
+}
+@media screen and (max-width: 620px) {
+  #menu .menu-nav h3 {
+    font-size: 50px;
+  }
+}
 
 .select-menu {
   color: #570A57;
@@ -349,6 +359,16 @@ h2 {
     margin: 5%;
   }
 }
+@media screen and (max-width: 880px) {
+  .skills-init h2 {
+    font-size: 45px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .skills-init h2 {
+    font-size: 60px;
+  }
+}
 .skills-init h3 {
   font-size: 40px;
   margin: 3vw;
@@ -413,8 +433,7 @@ h2 {
 }
 @media screen and (max-width: 800px) {
   .skills-clicked-content {
-    margin: 0;
-    gap: 5%;
+    justify-content: center;
   }
 }
 .skills-clicked-content img {
@@ -501,6 +520,12 @@ h2 {
   margin: 0 4%;
   padding: 1% 1%;
 }
+@media screen and (max-width: 1200px) {
+  .projects .project1 {
+    flex-direction: column;
+    margin: 5%;
+  }
+}
 .projects .project1 img {
   border-radius: 25px;
   border: solid 4px black;
@@ -516,6 +541,12 @@ h2 {
   border: solid 4px black;
   transform: translateZ(0);
   margin: 3%;
+}
+@media screen and (max-width: 1200px) {
+  .projects .project1 .project-card {
+    width: 70%;
+    height: 35vw;
+  }
 }
 .projects .project1 .project-card:after {
   content: " ";
@@ -549,6 +580,12 @@ h2 {
   margin: 0 4%;
   padding: 1% 1%;
 }
+@media screen and (max-width: 1200px) {
+  .projects .project2 {
+    flex-direction: column;
+    margin: 5%;
+  }
+}
 .projects .project2 img {
   border-radius: 25px;
   border: solid 4px black;
@@ -564,6 +601,12 @@ h2 {
   border: solid 4px black;
   transform: translateZ(0);
   margin: 3%;
+}
+@media screen and (max-width: 1200px) {
+  .projects .project2 .project-card {
+    width: 70%;
+    height: 35vw;
+  }
 }
 .projects .project2 .project-card:after {
   content: " ";
