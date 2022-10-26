@@ -1,3 +1,5 @@
+@use 'mixins';
+
 @mixin animHover(){
     background-position: right center;
     background-color:#6600bf;
@@ -33,10 +35,27 @@
     font-size: 90px;
     opacity: 0.5;
     font-weight: 900;
-  
+
+    @include mixins.responsive(1175px){
+      line-height: 10vh;
+      margin-bottom: 2%;
+    }
+    
+    @include mixins.responsive(650px){
+      font-size: 70px;
+    }
+
     &-reverse{
       transform: rotate(180deg);
       line-height: 2vh;
+      
+      @include mixins.responsive(1175px){
+        line-height: 10vh;
+      }
+
+      @include mixins.responsive(650px){
+        font-size: 70px;
+      }
     }
 }
 
@@ -49,10 +68,20 @@
       height: 4px;
       width: 20vw;
       background-color: #d1d0c3;
+
+      @include mixins.responsive(1000px){
+        height: 5px;
+        width: 25vw;
+      }
     }
+
     img{
-    width: 10vw;
-    margin: 0 3vw;
+      width: 10vw;
+      margin: 0 3vw;
+
+      @include mixins.responsive(1000px){
+        width: 20vw;
+      }
     }
 }
 

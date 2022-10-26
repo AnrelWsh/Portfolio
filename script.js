@@ -1,3 +1,10 @@
+/**LOADING DISPLAY BETWEEN EACH PAGE */
+
+const loader =document.getElementById("divLoading")
+window.addEventListener("load", function(){
+  loader.style.display = "none" 
+})
+
 /*BURGER MENU DISPLAY*/ 
 
 const btnBurger = document.getElementById('menu-btn')
@@ -163,83 +170,84 @@ function reinitSkills() {
   adobeSkill.classList.remove("skills-selected")
   otherSkill.classList.remove("skills-selected")
 }
+if(frontEnd && backEnd && adobeSkill && otherSkill !== null) {
+  frontEnd.addEventListener('click', () => {
+    reinitSkills()
 
-frontEnd.addEventListener('click', () => {
-  reinitSkills()
+    otherSkill.classList.add("skills-title")
+    backEnd.classList.add("skills-title")
+    adobeSkill.classList.add("skills-title")
+    frontEnd.classList.add("skills-selected")
 
-  otherSkill.classList.add("skills-title")
-  backEnd.classList.add("skills-title")
-  adobeSkill.classList.add("skills-title")
-  frontEnd.classList.add("skills-selected")
+    backContent.style.display = "none"
+    otherContent.style.display = "none"
+    adobeContent.style.display = "none"
+    frontContent.style.display = "grid"
 
-  backContent.style.display = "none"
-  otherContent.style.display = "none"
-  adobeContent.style.display = "none"
-  frontContent.style.display = "grid"
+    frontEnd.style.gridArea = "selected"
+    backEnd.style.gridArea = "skill1"
+    adobeSkill.style.gridArea = "skill2"
+    otherSkill.style.gridArea = "skill3"
+  })
 
-  frontEnd.style.gridArea = "selected"
-  backEnd.style.gridArea = "skill1"
-  adobeSkill.style.gridArea = "skill2"
-  otherSkill.style.gridArea = "skill3"
-})
+  backEnd.addEventListener('click', () => {
+    reinitSkills()
 
-backEnd.addEventListener('click', () => {
-  reinitSkills()
+    frontEnd.classList.add("skills-title")
+    otherSkill.classList.add("skills-title")
+    adobeSkill.classList.add("skills-title")
+    backEnd.classList.add("skills-selected")
 
-  frontEnd.classList.add("skills-title")
-  otherSkill.classList.add("skills-title")
-  adobeSkill.classList.add("skills-title")
-  backEnd.classList.add("skills-selected")
+    frontContent.style.display = "none"
+    otherContent.style.display = "none"
+    adobeContent.style.display = "none"
+    backContent.style.display = "grid"
+    
+    backEnd.style.gridArea = "selected"
+    frontEnd.style.gridArea = "skill1"
+    adobeSkill.style.gridArea = "skill2"
+    otherSkill.style.gridArea = "skill3"
+  })
 
-  frontContent.style.display = "none"
-  otherContent.style.display = "none"
-  adobeContent.style.display = "none"
-  backContent.style.display = "grid"
-  
-  backEnd.style.gridArea = "selected"
-  frontEnd.style.gridArea = "skill1"
-  adobeSkill.style.gridArea = "skill2"
-  otherSkill.style.gridArea = "skill3"
-})
+  adobeSkill.addEventListener('click', () => {
+    reinitSkills()
 
-adobeSkill.addEventListener('click', () => {
-  reinitSkills()
+    frontEnd.classList.add("skills-title")
+    backEnd.classList.add("skills-title")
+    otherSkill.classList.add("skills-title")
+    adobeSkill.classList.add("skills-selected")
 
-  frontEnd.classList.add("skills-title")
-  backEnd.classList.add("skills-title")
-  otherSkill.classList.add("skills-title")
-  adobeSkill.classList.add("skills-selected")
+    frontContent.style.display = "none"
+    otherContent.style.display = "none"
+    backContent.style.display = "none"
+    adobeContent.style.display = "grid"
+    
+    adobeSkill.style.gridArea = "selected"
+    frontEnd.style.gridArea = "skill1"
+    backEnd.style.gridArea = "skill2"
+    otherSkill.style.gridArea = "skill3"
+  })
 
-  frontContent.style.display = "none"
-  otherContent.style.display = "none"
-  backContent.style.display = "none"
-  adobeContent.style.display = "grid"
-  
-  adobeSkill.style.gridArea = "selected"
-  frontEnd.style.gridArea = "skill1"
-  backEnd.style.gridArea = "skill2"
-  otherSkill.style.gridArea = "skill3"
-})
+  otherSkill.addEventListener('click', () => {
+    reinitSkills()
 
-otherSkill.addEventListener('click', () => {
-  reinitSkills()
+    frontEnd.classList.add("skills-title")
+    backEnd.classList.add("skills-title")
+    adobeSkill.classList.add("skills-title")
+    otherSkill.classList.add("skills-selected")
+    
 
-  frontEnd.classList.add("skills-title")
-  backEnd.classList.add("skills-title")
-  adobeSkill.classList.add("skills-title")
-  otherSkill.classList.add("skills-selected")
-  
-
-  frontContent.style.display = "none"
-  adobeContent.style.display = "none"
-  backContent.style.display = "none"
-  otherContent.style.display = "grid"
-  
-  otherSkill.style.gridArea = "selected"
-  frontEnd.style.gridArea = "skill1"
-  backEnd.style.gridArea = "skill2"
-  adobeSkill.style.gridArea = "skill3"
-})
+    frontContent.style.display = "none"
+    adobeContent.style.display = "none"
+    backContent.style.display = "none"
+    otherContent.style.display = "grid"
+    
+    otherSkill.style.gridArea = "selected"
+    frontEnd.style.gridArea = "skill1"
+    backEnd.style.gridArea = "skill2"
+    adobeSkill.style.gridArea = "skill3"
+  })
+}
 
 
 /**FADE APPARITION OF PROJECTS WITH ITERSECTION OBSERVER API AND IMAGE MOVING WITH CURSOR ON IT*/

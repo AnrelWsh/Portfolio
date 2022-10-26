@@ -67,13 +67,6 @@ html{
       width: 40%;
       margin: 3%;
 
-      @include mixins.responsive(1117px){
-          width: 20%;
-      }
-
-      @include mixins.responsive(700px){
-          width: 40%;
-      }
   }
 }
 
@@ -140,23 +133,24 @@ html{
       align-items: center;
       gap: 15vw;
       width: 100vw;
+      user-select: none;
 
       div{
         height: 10px;
         background-color: #570A57;
       }
       #slD1{
-        @include mixins.tréMenu(25vw)
+        @include mixins.tréMenu(25vw);
       }
       #slD2{
-        @include mixins.tréMenu(26vw)
+        @include mixins.tréMenu(26vw);
       }
       #slD3{
-        @include mixins.tréMenu(22vw)
+        @include mixins.tréMenu(22vw);
       }
 
       &:hover div{
-        @include anim.animHover
+        @include anim.animHover;
       } 
     }
 
@@ -168,7 +162,7 @@ html{
 }
 
 .select-menu {
-  @include anim.selectMenu
+  @include anim.selectMenu;
 }
 
 .intro{
@@ -177,15 +171,30 @@ html{
   justify-content: space-around;
   margin: 10% auto;
 
+  @include mixins.responsive(1000px){
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-end;
+  }
+
   h1{
     font-size: 100px;
     width: 47vw;
     font-family: 'Ubuntu', 'Segoe UI';
+
+    @include mixins.responsive(1000px){
+      width: 100%;
+      margin: 1%;
+    }
+  }
+
+  img{
+    margin: 1% 15%;
   }
 }
 
 .slide-title{
-  @include anim.slideTitle
+  @include anim.slideTitle;
 }
 
 main{
@@ -196,7 +205,7 @@ main{
 }
 
 .sep{
-  @include anim.sep
+  @include anim.sep;
 }
 
 h2{
@@ -207,7 +216,7 @@ h2{
 }
 
 .magnet {
-  @include anim.magnet
+  @include anim.magnet;
 }
 
 /*------------------------------------ME-----------------------------*/
@@ -218,6 +227,10 @@ h2{
     align-items: center;
     justify-content: center;
     padding: 5vw;
+
+    @include mixins.responsive(1000px){
+      flex-direction: column;
+    }
   }
   img{
     transform: skew(0);
@@ -240,6 +253,9 @@ h2{
     }
   }
 }
+/*------------------------------------ME-----------------------------*/
+
+/*------------------------------------SKILLS-----------------------------*/
 
 .skills-init{
   display: grid;
@@ -251,13 +267,35 @@ h2{
                       "adobe title other"
                       ". be .";
 
+  @include mixins.responsive(800px){
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas:"title title"
+                        "fe ."
+                        ". be"
+                        "adobe ."
+                        ". other";
+  }
+
   h2{
     grid-area: title;
     margin: 16% 0;
+
+    @include mixins.responsive(1275px){
+      font-size: 60px;
+    }
+    @include mixins.responsive(1000px){
+      font-size: 50px;
+      margin: 5%;
+    }
   }
   h3{
     font-size: 40px;
     margin: 3vw;
+
+    @include mixins.responsive(1000px){
+      font-size: 30px;
+    }
   }
 
   #fe{
@@ -285,9 +323,7 @@ h2{
     }
   }
 }
-/*------------------------------------ME-----------------------------*/
 
-/*------------------------------------SKILLS-----------------------------*/
 
 .skills-clicked{
   transition: ease-in-out 500ms;
@@ -299,6 +335,18 @@ h2{
   grid-template-areas:"title . ."
                       "selected content content"
                       "skill1 skill2 skill3";
+
+  @include mixins.responsive(800px){
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto auto;
+    grid-template-areas:"title"
+                        "selected"
+                        "content"
+                        "skill1"
+                        "skill2"
+                        "skill3";
+  }
+
   h2{
     grid-area: title;
   }
@@ -315,9 +363,18 @@ h2{
     gap: 2%;
     margin: 5%;
 
+    @include mixins.responsive(800px){
+      margin: 0;
+      gap: 5%;
+    }
+
     img{
       width: 10vw;
       object-fit: cover;
+
+      @include mixins.responsive(800px){
+        width: 25vw;
+      }
     }
 
     .logo1{
@@ -449,11 +506,18 @@ footer{
       font-weight: 900;
       color: antiquewhite;
       padding: 4vh 2vw;
+      margin-top: 5%;
+
+      @include mixins.responsive(700px){
+        margin-top: 10%;
+      }
   }
 
   h3{
       grid-area: sous-titre;
       color: antiquewhite;
+      font-size: 25px;
+      font-family: 'Ubuntu', 'Segoe UI';
 
       @include mixins.responsive(1000px){
           text-align: center;
@@ -467,6 +531,10 @@ footer{
   #gifFoot{
     grid-area: gifFoot;
     width: 60%;
+
+    @include mixins.responsive(1000px){
+      width: 40%;
+    }
 }
   #monInsta{
       grid-area: monInsta;

@@ -65,16 +65,6 @@ html {
   width: 40%;
   margin: 3%;
 }
-@media screen and (max-width: 1117px) {
-  #navbar img {
-    width: 20%;
-  }
-}
-@media screen and (max-width: 700px) {
-  #navbar img {
-    width: 40%;
-  }
-}
 
 .menu-btn-close {
   cursor: pointer;
@@ -136,6 +126,7 @@ html {
   align-items: center;
   gap: 15vw;
   width: 100vw;
+  user-select: none;
 }
 #menu .menu-nav .sl div {
   height: 10px;
@@ -187,10 +178,26 @@ html {
   justify-content: space-around;
   margin: 10% auto;
 }
+@media screen and (max-width: 1000px) {
+  .intro {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-end;
+  }
+}
 .intro h1 {
   font-size: 100px;
   width: 47vw;
   font-family: "Ubuntu", "Segoe UI";
+}
+@media screen and (max-width: 1000px) {
+  .intro h1 {
+    width: 100%;
+    margin: 1%;
+  }
+}
+.intro img {
+  margin: 1% 15%;
 }
 
 .slide-title {
@@ -199,9 +206,30 @@ html {
   opacity: 0.5;
   font-weight: 900;
 }
+@media screen and (max-width: 1175px) {
+  .slide-title {
+    line-height: 10vh;
+    margin-bottom: 2%;
+  }
+}
+@media screen and (max-width: 650px) {
+  .slide-title {
+    font-size: 70px;
+  }
+}
 .slide-title-reverse {
   transform: rotate(180deg);
   line-height: 2vh;
+}
+@media screen and (max-width: 1175px) {
+  .slide-title-reverse {
+    line-height: 10vh;
+  }
+}
+@media screen and (max-width: 650px) {
+  .slide-title-reverse {
+    font-size: 70px;
+  }
 }
 
 main p {
@@ -219,9 +247,20 @@ main p {
   width: 20vw;
   background-color: #d1d0c3;
 }
+@media screen and (max-width: 1000px) {
+  .sep-line {
+    height: 5px;
+    width: 25vw;
+  }
+}
 .sep img {
   width: 10vw;
   margin: 0 3vw;
+}
+@media screen and (max-width: 1000px) {
+  .sep img {
+    width: 20vw;
+  }
 }
 
 h2 {
@@ -255,6 +294,11 @@ h2 {
   justify-content: center;
   padding: 5vw;
 }
+@media screen and (max-width: 1000px) {
+  .me-content {
+    flex-direction: column;
+  }
+}
 .me img {
   transform: skew(0);
   transition: 300ms ease-in;
@@ -273,6 +317,8 @@ h2 {
   padding: 1vw;
 }
 
+/*------------------------------------ME-----------------------------*/
+/*------------------------------------SKILLS-----------------------------*/
 .skills-init {
   display: grid;
   align-items: center;
@@ -281,13 +327,36 @@ h2 {
   grid-template-rows: auto auto auto;
   grid-template-areas: ". fe ." "adobe title other" ". be .";
 }
+@media screen and (max-width: 800px) {
+  .skills-init {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas: "title title" "fe ." ". be" "adobe ." ". other";
+  }
+}
 .skills-init h2 {
   grid-area: title;
   margin: 16% 0;
 }
+@media screen and (max-width: 1275px) {
+  .skills-init h2 {
+    font-size: 60px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .skills-init h2 {
+    font-size: 50px;
+    margin: 5%;
+  }
+}
 .skills-init h3 {
   font-size: 40px;
   margin: 3vw;
+}
+@media screen and (max-width: 1000px) {
+  .skills-init h3 {
+    font-size: 30px;
+  }
 }
 .skills-init #fe {
   grid-area: fe;
@@ -314,8 +383,6 @@ h2 {
   content: "⯆";
 }
 
-/*------------------------------------ME-----------------------------*/
-/*------------------------------------SKILLS-----------------------------*/
 .skills-clicked {
   transition: ease-in-out 500ms;
   display: grid;
@@ -324,6 +391,13 @@ h2 {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto auto auto;
   grid-template-areas: "title . ." "selected content content" "skill1 skill2 skill3";
+}
+@media screen and (max-width: 800px) {
+  .skills-clicked {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto auto;
+    grid-template-areas: "title" "selected" "content" "skill1" "skill2" "skill3";
+  }
 }
 .skills-clicked h2 {
   grid-area: title;
@@ -337,9 +411,20 @@ h2 {
   gap: 2%;
   margin: 5%;
 }
+@media screen and (max-width: 800px) {
+  .skills-clicked-content {
+    margin: 0;
+    gap: 5%;
+  }
+}
 .skills-clicked-content img {
   width: 10vw;
   object-fit: cover;
+}
+@media screen and (max-width: 800px) {
+  .skills-clicked-content img {
+    width: 25vw;
+  }
 }
 .skills-clicked-content .logo1 {
   grid-area: logo1;
@@ -545,10 +630,18 @@ footer h2 {
   font-weight: 900;
   color: antiquewhite;
   padding: 4vh 2vw;
+  margin-top: 5%;
+}
+@media screen and (max-width: 700px) {
+  footer h2 {
+    margin-top: 10%;
+  }
 }
 footer h3 {
   grid-area: sous-titre;
   color: antiquewhite;
+  font-size: 25px;
+  font-family: "Ubuntu", "Segoe UI";
 }
 @media screen and (max-width: 1000px) {
   footer h3 {
@@ -571,6 +664,11 @@ footer #cv h4 {
 footer #gifFoot {
   grid-area: gifFoot;
   width: 60%;
+}
+@media screen and (max-width: 1000px) {
+  footer #gifFoot {
+    width: 40%;
+  }
 }
 footer #monInsta {
   grid-area: monInsta;
