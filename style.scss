@@ -48,6 +48,7 @@ html{
   background-image: url("img/fond.jpeg");
   animation: animback 25s ease infinite;
   overflow-x: hidden;
+  cursor: crosshair;
 }
 
 #navbar{
@@ -185,6 +186,7 @@ html{
   }
 
   h1{
+    margin-left: 2%;
     font-size: 100px;
     width: 47vw;
     font-family: 'Ubuntu', 'Segoe UI';
@@ -254,6 +256,16 @@ h2{
   }
   &-txt{
     padding: 5vw;
+
+    a{
+      text-decoration: underline;
+      transition: 200ms ease-in;
+
+      &:hover{
+        color: blue;
+        transition: 200ms ease-in;
+      }
+    }
 
     p{
       padding: 1vw;
@@ -461,13 +473,13 @@ h2{
   .project1{
     @include mixins.projectCard(row);
     .project-card{
-      background-image: url(img/prjt-rueil.jpg)
+      background-image: url(img/prjt-asc.jpg)
     }
   }
   .project2{
     @include mixins.projectCard(row-reverse);
     .project-card{
-      background-image: url(img/prjt-asc.jpg)
+      background-image: url(img/prjt-rueil.jpg)
     }
   }
 }
@@ -569,4 +581,8 @@ footer{
 
 ::-webkit-scrollbar {
   @include anim.scrollbar
+}
+::selection {
+  color: #6600bf;
+  background-color: antiquewhite;
 }

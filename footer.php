@@ -4,8 +4,8 @@
     <a id="cv" class="select-menu" href="img/cv.pdf" target="_blank">
         <h4>Resume</h4>
     </a>
-    <img id="gifFoot" src="img/anrelgif.gif" alt="Logo GIF">
-    <a id="monInsta" class="select-menu" href="https://www.instagram.com/a_aine_jai_eu_el/" target="_blank">
+    <img id="gifFoot" src="img/anrelgif.gif" alt="Logo Anrel">
+    <a id="monInsta" class="select-menu" href="https://www.instagram.com/a_aine_jai_eu_el/" target="_blank" rel="nofollow">
         <h4>Contact the creator</h4>
     </a>
 </footer>

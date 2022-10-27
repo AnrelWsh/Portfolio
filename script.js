@@ -11,19 +11,21 @@ const btnBurger = document.getElementById('menu-btn')
 const menuBurger = document.getElementById('menu')
 const nOverflow = document.getElementById('html')
 
-btnBurger.addEventListener('click', () => {
+btnBurger.onclick = function()  {
   if (menuBurger.style.display == "none") {
     menuBurger.style.display = "block"
     btnBurger.classList.remove("menu-btn-close")
     btnBurger.classList.add("menu-btn-open")
     nOverflow.style.overflowY = "hidden"
+    
   } else{
     menuBurger.style.display = "none"
     btnBurger.classList.remove("menu-btn-open")
     btnBurger.classList.add("menu-btn-close")
     nOverflow.style.overflowY = "visible"
   }
-})
+}
+
 
 /**INTRO HEADER ANIM */
 

@@ -46,6 +46,7 @@ html {
   background-image: url("img/fond.jpeg");
   animation: animback 25s ease infinite;
   overflow-x: hidden;
+  cursor: crosshair;
 }
 
 #navbar {
@@ -196,6 +197,7 @@ html {
   }
 }
 .intro h1 {
+  margin-left: 2%;
   font-size: 100px;
   width: 47vw;
   font-family: "Ubuntu", "Segoe UI";
@@ -322,6 +324,14 @@ h2 {
 }
 .me-txt {
   padding: 5vw;
+}
+.me-txt a {
+  text-decoration: underline;
+  transition: 200ms ease-in;
+}
+.me-txt a:hover {
+  color: blue;
+  transition: 200ms ease-in;
 }
 .me-txt p {
   padding: 1vw;
@@ -569,7 +579,7 @@ h2 {
   margin: 0;
 }
 .projects .project1 .project-card {
-  background-image: url(img/prjt-rueil.jpg);
+  background-image: url(img/prjt-asc.jpg);
 }
 .projects .project2 {
   display: flex;
@@ -629,7 +639,7 @@ h2 {
   margin: 0;
 }
 .projects .project2 .project-card {
-  background-image: url(img/prjt-asc.jpg);
+  background-image: url(img/prjt-rueil.jpg);
 }
 
 .reveal {
@@ -748,6 +758,11 @@ footer #monInsta h4 {
 }
 ::-webkit-scrollbar-track {
   background-color: #570A57;
+}
+
+::selection {
+  color: #6600bf;
+  background-color: antiquewhite;
 }
 
 /*# sourceMappingURL=build.css.map */

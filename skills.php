@@ -7,7 +7,7 @@
     <main>    
       <div class="sep">
         <div class="sep-line"></div>
-        <img src="img/anrel.png" alt="Logo Separation">
+        <img src="img/anrel.png" alt="Logo Anrel Separation">
         <div class="sep-line"></div>
       </div>
 

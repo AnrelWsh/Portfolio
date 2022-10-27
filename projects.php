@@ -7,7 +7,7 @@
     <main>    
       <div class="sep">
         <div class="sep-line"></div>
-        <img src="img/anrel.png" alt="Logo Separation">
+        <img src="img/anrel.png" alt="Logo Anrel Separation">
         <div class="sep-line"></div>
       </div>
       
@@ -26,7 +26,7 @@
           <div class="project-txt">
             <h4>Rueil Website</h4>
             <p>This website was made to make people discover the city of Rueil-Malmaison. A beautiful city with its plains, the Seine and its wild grid displays !</p>
-            <a href="https://anrelwsh.github.io/ProjetRueil/"><p class="magnet">See Project</p></a>
+            <a href="https://anrelwsh.github.io/ProjetRueil/" rel="nofollow"><p class="magnet">See Project</p></a>
           </div>
         </div>
       </section>

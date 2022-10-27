@@ -7,7 +7,7 @@
     <main>    
       <div class="sep">
         <div class="sep-line"></div>
-        <img src="img/anrel.png" alt="Logo Separation">
+        <img src="img/anrel.png" alt="Logo Anrel Separation">
         <div class="sep-line"></div>
       </div>
 
@@ -18,7 +18,7 @@
         <div class="me-content afterzoom">
           <div class="me-txt">
             <p id="me1">
-              - Student at IIM Digital School (Institute of Internet and Multimedia)
+              - Student at <a href="https://www.iim.fr/" rel="nofollow">IIM Digital School</a> (Institute of Internet and Multimedia)
             </p>
             <p id="me2">
               - Looking for a work-study / apprenticeship for September 2023
@@ -27,7 +27,7 @@
               - Future Fullstack developer, but more focused on the Front-End
             </p>
           </div>
-          <img id="imgMe" src="img/logoIIM.png" alt="Me images">
+          <img id="imgMe" src="img/logoIIM.png" alt="Me Section Images">
         </div>
       </section>
     </main>
