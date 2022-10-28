@@ -1,3 +1,13 @@
+const defaultTitle =  document.title
+
+document.addEventListener( 'visibilitychange' , function() {
+  if (document.hidden) {
+      document.title = "Come back here !!"
+  } else {
+      document.title = defaultTitle
+  }
+}, false )
+
 /**LOADING DISPLAY BETWEEN EACH PAGE */
 
 const loader =document.getElementById("divLoading")

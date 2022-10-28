@@ -1,5 +1,27 @@
 <?php 
     $pageTitle = "Projects - Anrel Portfolio";
+    $pageDescription = "Welcome to this Incredible web portfolio. Here Angel, a future Fullstack developer, will show you his newest website projects. You wanna be amazed? You'll be!"; 
+    $pageSnippet =     
+      '<script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "NewsArticle",
+        "headline": "Discover Angel`s marvelous projects",
+        "image": [
+          "img/",
+          "https://example.com/photos/4x3/photo.jpg",
+          "https://example.com/photos/4x3/photo.jpg",
+          "https://example.com/photos/16x9/photo.jpg"
+        ],
+        "datePublished": "2022-10-10"
+        "author": [{
+            "@type": "Person",
+            "name": "Angel Hmeli",
+            "url": "https://www.instagram.com/a_aine_jai_eu_el/"
+        }]
+      }
+      </script>';
+    
     require "doctype.php";
     require "header.php";
 ?>
