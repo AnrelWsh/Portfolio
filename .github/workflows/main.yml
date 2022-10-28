@@ -1,0 +1,62 @@
+- name: Binoculars Action
+  # You may pin to the exact commit or the version.
+  # uses: foo-software/binoculars-action@21e84de9937428b73a157aef7226113dc3ce1fd3
+  uses: foo-software/binoculars-action@v1.0.2
+  with:
+    # For Slack notifications: A user handle, typically from GitHub.
+    author: # optional
+    # The AWS accessKeyId for an S3 bucket.
+    awsAccessKeyId: # optional
+    # The AWS Bucket for an S3 bucket.
+    awsBucket: # optional
+    # The AWS region for an S3 bucket.
+    awsRegion: # optional
+    # The AWS secretAccessKey for an S3 bucket.
+    awsSecretAccessKey: # optional
+    # For Slack notifications: A version control branch, typically from GitHub.
+    branch: # optional
+    # An endpoint to post comments to. This is only needed if you want to trigger comments on 'push'. A 'pull_request' trigger does not require this to be set. Typically this will be from GitHub's API. Example: https://api.github.com/repos/:owner/:repo/commits/:commit_sha/comments.
+    commentUrl: # optional
+    # If true and accessToken is set scores will be posted as comments.
+    enableComments: # optional
+    # The required minimum score. If score is lower an error will throw.
+    minScore: # optional
+    # An absolute directory path to output report. You can do this an an alternative or combined with an S3 upload.
+    outputDirectory: # optional
+    # For Slack notifications: A version control pull request URL, typically from GitHub.
+    pr: # optional
+    # Access token of a user to post PR comments.
+    accessToken: # optional
+    # For Slack notifications: A version control sha, typically from GitHub.
+    sha: # optional
+    # A Slack Incoming Webhook URL to send notifications to.
+    slackWebhookUrl: # optional
+    # A pipe separated list of URLs.
+    urls: # optional
+    
+    
+- name: SEO Action
+  # You may pin to the exact commit or the version.
+  # uses: QiYuTechDev/seo-action@08c4671d7faa1c8052c5b7dcd086cf01ee3bc034
+  uses: QiYuTechDev/seo-action@v0.0.6
+  with:
+    # seo version
+    version: # default is 0.7.0
+    # the code(js file) you want to run in url
+    code: # default is code.js
+    # The url you want to scrapy/test
+    url: 
+    # capture the snapshot for url
+    snapshot: 
+    # capture the pdf for url
+    pdf: 
+    # capture video for url
+    video: 
+    # capture rrweb for url
+    rrweb: 
+    # timeout(in second) for operation
+    timeout: # default is 30
+    # debug the action
+    debug: 
+    # GitHub personal access token with public_repo permission(for the view the artifacts)
+    gh_token: # default is 
