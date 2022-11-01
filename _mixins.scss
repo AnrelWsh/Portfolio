@@ -1,13 +1,16 @@
+// Width for menu lines 
 @mixin tréMenu($tréWidth){
     width: $tréWidth;
 }
 
+// Easier responsive writing mixin
 @mixin responsive($width){
     @media screen and (max-width:$width) {
         @content;
     }
 }
 
+// Projects display 
 @mixin projectCard($flexdir){
     display: flex;
     flex-direction: $flexdir;
@@ -67,6 +70,7 @@
     }
 }
 
+// Style for footer's links
 @mixin btnFooter($bc){
     transition: ease-in-out 500ms;
     padding: 4vh 4vw;

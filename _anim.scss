@@ -1,5 +1,6 @@
-@use 'mixins';
+@use 'mixins'; //Calling '_mixins.scss'
 
+// Animation for the lines next to navigation in menu
 @mixin animHover(){
     background-position: right center;
     background-color:#6600bf;
@@ -9,6 +10,7 @@
     transition:background-size 1s, background-color 1s;
 }
 
+// Animation for navigation menu's and footer's links 
 @mixin selectMenu(){
     color: #570A57;
     border: solid #0000;
@@ -30,6 +32,7 @@
     }
 }
 
+// Animation for the slide text in header
 @mixin slideTitle(){
     margin: 5% 0;
     font-size: 90px;
@@ -59,6 +62,7 @@
     }
 }
 
+// Separation thing style
 @mixin sep(){
     display: flex;
     align-items: center;
@@ -85,6 +89,7 @@
     }
 }
 
+// Magnet buttons style
 @mixin magnet(){
     display: inline-block;
     font-size: 30px;
@@ -103,6 +108,7 @@
     }
 }
 
+// Changing scrollbar style
 @mixin scrollbar(){
     width: 15px;
 
