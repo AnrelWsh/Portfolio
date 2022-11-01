@@ -1,3 +1,5 @@
+/**CHANGING DOCUMENT TITLE AT LEAVING */
+
 const defaultTitle =  document.title
 
 document.addEventListener( 'visibilitychange' , function() {
@@ -8,12 +10,14 @@ document.addEventListener( 'visibilitychange' , function() {
   }
 }, false )
 
+
 /**LOADING DISPLAY BETWEEN EACH PAGE */
 
 const loader =document.getElementById("divLoading")
 window.addEventListener("load", function(){
   loader.style.display = "none" 
 })
+
 
 /*BURGER MENU DISPLAY*/ 
 
@@ -138,8 +142,6 @@ if(me1 && me2 && me3 !== null) {
       imgMe.src = "img/moi.gif"
   })
 }
-
-
 
 
 /**INIT MAGNET MOUSE API */
@@ -286,6 +288,7 @@ const intersect = function (entries, observer){
         var ay =+ ay + 90
         var ay =- ay + 180
         document.getElementById("project-card2").style.transform = "rotateY("+ax+"deg) rotateX("+ay+"deg)"
+        document.getElementById("project-card3").style.transform = "rotateY("+ax+"deg) rotateX("+ay+"deg)"
       })
       observer.unobserve(entry.target)
     }  

@@ -47,6 +47,14 @@
             <a href="https://anrelwsh.github.io/ProjetRueil/" rel="nofollow"><p class="magnet">See Project</p></a>
           </div>
         </div>
+        <div class="project3 reveal">
+          <div class="project-card" id="project-card3"></div>
+          <div class="project-txt">
+            <h4>Hobbie Website</h4>
+            <p>This website was made to make people discover my hobbie: the music. Here I'll tell you what and why I like. There are also artist pages to make you dicover some of them.</p>
+            <a href="https://sitepassion.vercel.app/" rel="nofollow"><p class="magnet">See Project</p></a>
+          </div>
+        </div>
       </section>
     </main>
 

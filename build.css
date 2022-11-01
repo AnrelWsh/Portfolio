@@ -25,6 +25,14 @@
     background-position: 10% 50%;
   }
 }
+html {
+  background-image: url("img/fond.jpeg");
+  animation: animback 25s ease infinite;
+  overflow-x: hidden;
+  cursor: crosshair;
+}
+
+/*-----------------------------------HEADER STYLE-----------------------------*/
 #divLoading {
   width: 100%;
   height: 100%;
@@ -40,13 +48,6 @@
 .loading {
   display: inline-block;
   position: relative;
-}
-
-html {
-  background-image: url("img/fond.jpeg");
-  animation: animback 25s ease infinite;
-  overflow-x: hidden;
-  cursor: crosshair;
 }
 
 #navbar {
@@ -244,11 +245,6 @@ html {
   }
 }
 
-main p {
-  font-family: "Ubuntu", "Segoe UI";
-  font-size: 30px;
-}
-
 .sep {
   display: flex;
   align-items: center;
@@ -275,6 +271,13 @@ main p {
   }
 }
 
+/*-----------------------------------HEADER STYLE-----------------------------*/
+/*-----------------------------------GENERAL CONTENT STYLE-----------------------------*/
+main p {
+  font-family: "Ubuntu", "Segoe UI";
+  font-size: 30px;
+}
+
 h2 {
   font-size: 80px;
   text-transform: uppercase;
@@ -299,6 +302,7 @@ h2 {
   color: #6600bf;
 }
 
+/*-----------------------------------GENERAL CONTENT STYLE-----------------------------*/
 /*------------------------------------ME-----------------------------*/
 .me-content {
   display: flex;
@@ -541,7 +545,7 @@ h2 {
   border: solid 4px black;
 }
 .projects .project1 .project-card {
-  height: 27vw;
+  height: 22vw;
   width: 100%;
   margin: 0 auto;
   transition: box-shadow 0.1s, transform 0.1s;
@@ -601,7 +605,7 @@ h2 {
   border: solid 4px black;
 }
 .projects .project2 .project-card {
-  height: 27vw;
+  height: 22vw;
   width: 100%;
   margin: 0 auto;
   transition: box-shadow 0.1s, transform 0.1s;
@@ -641,6 +645,66 @@ h2 {
 .projects .project2 .project-card {
   background-image: url(img/prjt-rueil.jpg);
 }
+.projects .project3 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+  margin: 0 4%;
+  padding: 1% 1%;
+}
+@media screen and (max-width: 1200px) {
+  .projects .project3 {
+    flex-direction: column;
+    margin: 5%;
+  }
+}
+.projects .project3 img {
+  border-radius: 25px;
+  border: solid 4px black;
+}
+.projects .project3 .project-card {
+  height: 22vw;
+  width: 100%;
+  margin: 0 auto;
+  transition: box-shadow 0.1s, transform 0.1s;
+  background-size: contain;
+  background-repeat: round;
+  border-radius: 25px;
+  border: solid 4px black;
+  transform: translateZ(0);
+  margin: 3%;
+}
+@media screen and (max-width: 1200px) {
+  .projects .project3 .project-card {
+    width: 70%;
+    height: 35vw;
+  }
+}
+.projects .project3 .project-card:after {
+  content: " ";
+  width: 100%;
+  height: 10px;
+}
+.projects .project3 .project-txt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.projects .project3 .project-txt h4 {
+  font-size: 45px;
+}
+.projects .project3 .project-txt p {
+  margin: 3%;
+}
+.projects .project3 .project-txt .magnet {
+  margin: 0;
+}
+.projects .project3 .project-card {
+  background-image: url(img/zikos.jpg);
+}
 
 .reveal {
   opacity: 0;
@@ -655,6 +719,7 @@ h2 {
   transition: 1s cubic-bezier(0.46, 0.22, 0.21, 1);
 }
 
+/*------------------------------------PROJECTS-----------------------------*/
 /*------------------------------------PROJECTS-----------------------------*/
 footer {
   background-color: #6600bf;
@@ -754,6 +819,8 @@ footer #mycontact img {
   }
 }
 
+/*------------------------------------PROJECTS-----------------------------*/
+/*------------------------------------OTHER-----------------------------*/
 .zoom {
   height: 100vh;
   width: 100%;
@@ -776,5 +843,7 @@ footer #mycontact img {
   color: #6600bf;
   background-color: antiquewhite;
 }
+
+/*------------------------------------OTHER-----------------------------*/
 
 /*# sourceMappingURL=build.css.map */

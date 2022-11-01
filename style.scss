@@ -493,6 +493,12 @@ h2{
       background-image: url(img/prjt-rueil.jpg)
     }
   }
+  .project3{
+    @include mixins.projectCard(row);
+    .project-card{
+      background-image: url(img/zikos.jpg)
+    }
+  }
 }
 
 // Lateral fade in animation
@@ -621,4 +627,4 @@ footer{
   color: #6600bf;
   background-color: antiquewhite;
 }
-/*------------------------------------PROJECTS-----------------------------*/
+/*------------------------------------OTHER-----------------------------*/
