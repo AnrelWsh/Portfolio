@@ -67,10 +67,10 @@
     }
 }
 
-@mixin btnFooter(){
+@mixin btnFooter($bc){
     transition: ease-in-out 500ms;
     padding: 4vh 4vw;
-    background-color: antiquewhite;
+    background-color: $bc;
     font-size: 20px;
     text-decoration: none;
 

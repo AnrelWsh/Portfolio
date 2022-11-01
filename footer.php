@@ -5,7 +5,8 @@
         <h4>Resume</h4>
     </a>
     <img id="gifFoot" src="img/anrelgif.gif" alt="Logo Anrel">
-    <a id="monInsta" class="select-menu" href="https://www.instagram.com/a_aine_jai_eu_el/" target="_blank" rel="nofollow">
-        <h4>Contact the creator</h4>
-    </a>
+    <div id="mycontact">
+        <a class="select-menu" href="https://www.instagram.com/a_aine_jai_eu_el/" target="_blank" rel="nofollow"><img src="img/insta.svg" alt="Contact Insta"></a>
+        <a class="select-menu" href="https://github.com/AnrelWsh?tab=repositories" target="_blank" rel="nofollow"><img src="img/github.svg" alt="Contact Github"></a>
+    </div>
 </footer>

@@ -667,13 +667,13 @@ footer {
   justify-items: center;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto auto;
-  grid-template-areas: "titre sous-titre sous-titre" "cv gifFoot monInsta";
+  grid-template-areas: "titre sous-titre sous-titre" "cv gifFoot mycontact";
 }
 @media screen and (max-width: 1000px) {
   footer {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: auto auto auto auto auto;
-    grid-template-areas: "titre" "sous-titre" "cv" "gifFoot" "monInsta";
+    grid-template-areas: "titre" "sous-titre" "cv" "gifFoot" "mycontact";
     gap: 20px;
   }
 }
@@ -723,18 +723,30 @@ footer #gifFoot {
     width: 40%;
   }
 }
-footer #monInsta {
-  grid-area: monInsta;
+footer #mycontact {
+  grid-area: mycontact;
   transition: ease-in-out 500ms;
   padding: 4vh 4vw;
-  background-color: antiquewhite;
+  background-color: none;
   font-size: 20px;
   text-decoration: none;
+  display: flex;
+  align-items: end;
+  width: 100%;
+  justify-content: space-evenly;
 }
-footer #monInsta h4 {
+footer #mycontact h4 {
   font-family: "Ubuntu", "Segoe UI";
   font-size: 25px;
   color: #570A57;
+}
+footer #mycontact img {
+  width: 5vw;
+}
+@media screen and (max-width: 1000px) {
+  footer #mycontact img {
+    width: 10vw;
+  }
 }
 @media screen and (max-width: 1117px) {
   footer h4 {

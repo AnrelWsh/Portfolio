@@ -510,7 +510,7 @@ footer{
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto auto;
   grid-template-areas:"titre sous-titre sous-titre"
-                      "cv gifFoot monInsta";
+                      "cv gifFoot mycontact";
 
   @include mixins.responsive(1000px){
       grid-template-columns: repeat(1, 1fr);
@@ -519,7 +519,7 @@ footer{
                           "sous-titre"
                           "cv"
                           "gifFoot"
-                          "monInsta";
+                          "mycontact";
 
       gap: 20px;
   }
@@ -550,7 +550,7 @@ footer{
 
   #cv{
       grid-area: cv;
-      @include mixins.btnFooter();
+      @include mixins.btnFooter(antiquewhite);
   }
   #gifFoot{
     grid-area: gifFoot;
@@ -559,18 +559,31 @@ footer{
     @include mixins.responsive(1000px){
       width: 40%;
     }
-}
-  #monInsta{
-      grid-area: monInsta;
-      @include mixins.btnFooter();
   }
+  #mycontact{
+    grid-area: mycontact;
+    @include mixins.btnFooter(none);
 
-  h4{
-      @include mixins.responsive(1117px){
-          font-size: 15px ;
+    display: flex;
+    align-items: end;
+    width: 100%;
+    justify-content: space-evenly;
+
+    img{
+      width: 5vw;
+      
+      @include mixins.responsive(1000px){
+        width: 10vw;
       }
+    }
+  }
+  h4{
+    @include mixins.responsive(1117px){
+        font-size: 15px ;
+    }
   }
 }
+
 
 .zoom {
   height: 100vh;
