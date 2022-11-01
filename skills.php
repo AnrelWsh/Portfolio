@@ -1,43 +1,40 @@
 <?php 
-    $pageTitle = "Skills - Anrel Portfolio";
-    $pageDescription = "Welcome to this Incredible web portfolio. Here Angel, a future Fullstack developer, will show you what web language, programs, soft skills he can master."; 
+    $pageTitle = "Skills - Anrel Portfolio"; //Document title
+    $pageDescription = "Welcome to this Incredible web portfolio. Here Angel, a future Fullstack developer, will show you what web language, programs, soft skills he can master.";     //Document description on search results
+
+    /**PAGE SNIPPETS FOR SEARCH ENGINE OPTIMISATION */
     $pageSnippet =     
     '<script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "NewsArticle",
-      "headline": "Discover Angel`s numerous skills",
-      "image": [
-        "img/",
-        "https://example.com/photos/4x3/photo.jpg",
-        "https://example.com/photos/4x3/photo.jpg",
-        "https://example.com/photos/16x9/photo.jpg"
-       ],
-      "datePublished": "2022-10-10"
-      "author": [{
-          "@type": "Person",
-          "name": "Angel Hmeli",
-          "url": "https://www.instagram.com/a_aine_jai_eu_el/"
-      }]
-    }
+      {
+        "@context": "https://schema.org",
+        "@type": "NewsArticle",
+        "headline": "Discover Angel`s numerous skills",
+        "image": [
+          "img/",
+          "https://example.com/photos/4x3/photo.jpg",
+          "https://example.com/photos/4x3/photo.jpg",
+          "https://example.com/photos/16x9/photo.jpg"
+        ],
+        "datePublished": "2022-10-10"
+        "author": [{
+            "@type": "Person",
+            "name": "Angel Hmeli",
+            "url": "https://www.instagram.com/a_aine_jai_eu_el/"
+        }]
+      }
     </script>';
-    require "doctype.php";
-    require "header.php";
+    require "doctype.php";  //Calling for the doctype
+    require "header.php";  //Calling for the header
 ?>
    
     <main>    
-      <div class="sep">
-        <div class="sep-line"></div>
-        <img src="img/anrel.png" alt="Logo Anrel Separation">
-        <div class="sep-line"></div>
-      </div>
-
-      <section id="skills" class="skills-init">
+      <section id="skills" class="skills-init"> <!--Page content-->
         <h2 id="skilz">My skills</h2>
         <h3 id="fe" class="magnet">Front-End </h3>
         <h3 id="be" class="magnet">Back-End </h3>
         <h3 id="adobe" class="magnet">Adobe </h3>
         <h3 id="other" class="magnet">Other </h3>
+
         <div class="skills-clicked-content" id="content-fe">
           <img class="logo1" src="img/skills/html.svg" alt="HTML Logo">
           <img class="logo2" src="img/skills/css.svg" alt="CSS Logo">
@@ -70,13 +67,13 @@
     </main>
 
     <?php 
-      require "footer.php";
+      require "footer.php";  //Calling for the footer
     ?>
 
   </body>
 
   <?php 
-    require "javaCall.php";
+    require "javaCall.php";  //Calling for the javascript document and APIs
   ?>
   
 </html>

@@ -1,38 +1,34 @@
 <?php 
-    $pageTitle = "Home - Anrel Portfolio";
-    $pageDescription = "Welcome to this Incredible web portfolio. Here Angel, a future Fullstack developer, will introduce himself (by the way, he's looking for aprenticeship ;)).";    
-    $pageSnippet =     
+    $pageTitle = "Home - Anrel Portfolio"; //Document title
+    $pageDescription = "Welcome to this Incredible web portfolio. Here Angel, a future Fullstack developer, will introduce himself (by the way, he's looking for aprenticeship ;)).";    //Document description on search results
+
+    /**PAGE SNIPPETS FOR SEARCH ENGINE OPTIMISATION */
+    $pageSnippet =                            
       '<script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "NewsArticle",
-        "headline": "Discover Angel, a future fullstack developer",
-        "image": [
-          "img/",
-          "https://example.com/photos/4x3/photo.jpg",
-          "https://example.com/photos/4x3/photo.jpg",
-          "https://example.com/photos/16x9/photo.jpg"
-        ],
-        "datePublished": "2022-10-10"
-        "author": [{
-            "@type": "Person",
-            "name": "Angel Hmeli",
-            "url": "https://www.instagram.com/a_aine_jai_eu_el/"
-        }]
-      }
+        {
+          "@context": "https://schema.org",
+          "@type": "NewsArticle",
+          "headline": "Discover Angel, a future fullstack developer",
+          "image": [
+            "img/",
+            "https://example.com/photos/4x3/photo.jpg",
+            "https://example.com/photos/4x3/photo.jpg",
+            "https://example.com/photos/16x9/photo.jpg"
+          ],
+          "datePublished": "2022-10-10"
+          "author": [{
+              "@type": "Person",
+              "name": "Angel Hmeli",
+              "url": "https://www.instagram.com/a_aine_jai_eu_el/"
+          }]
+        }
       </script>';
-    require "doctype.php";
-    require "header.php";
+    require "doctype.php";  //Calling for the doctype
+    require "header.php";  //Calling for the header
 ?>
 
     <main>    
-      <div class="sep">
-        <div class="sep-line"></div>
-        <img src="img/anrel.png" alt="Logo Anrel Separation">
-        <div class="sep-line"></div>
-      </div>
-
-      <section class="me">
+      <section class="me">  <!--Page content-->
         <h2 id="titi" class="zoom ">
           Angel ?
         </h2>
@@ -54,13 +50,13 @@
     </main>
 
     <?php 
-      require "footer.php";
+      require "footer.php";  //Calling for the footer
     ?>
 
   </body>
 
   <?php 
-    require "javaCall.php";
+    require "javaCall.php";  //Calling for the javascript document and APIs
   ?>
   
 </html>
