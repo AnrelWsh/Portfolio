@@ -104,6 +104,23 @@ slideTitleDown.forEach(el => {
   })
 })
 
+const ctt = document.querySelectorAll('.ctt')
+const cttxt = document.querySelectorAll('.cttxt')
+
+cttxt.forEach(el => {
+  gsap.to(el, {
+    scrollTrigger: {
+      trigger: ".ctt",
+      start: "top bottom",
+      end: "top",
+      pin: true,
+      scrub: true,
+      scale: 5,
+      duration: 500
+    }
+  })
+})
+
   /*const largeTitle = document.querySelectorAll('.largeTitle')
 
   if (largeTitle[0]) {
@@ -123,6 +140,45 @@ slideTitleDown.forEach(el => {
     })
   }*/
 
+
+
+
+  function LargeTitle() {
+    const largeTitle = document.querySelectorAll('.largeTitle')
+  
+    if (largeTitle[0]) {
+      largeTitle.forEach((section) => {
+        const title = document.querySelector('.line-0', section)
+  
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: section,
+            start: 'top top',
+            end: 'bottom bottom',
+            scrub: true,
+          },
+        })
+  
+        tl.to(title, { scale: 0.35 })
+      })
+    }
+  }
+  
+  function LargeTitleIn() {
+    const largeTitle = document.querySelector('.largeTitle-txt')
+  
+    if (largeTitle) {
+      const chars = document.querySelectorAll('.char-1', largeTitle)
+  
+      gsap.set(largeTitle, { autoAlpha: 1 })
+      gsap.from(chars, {
+        duration: 0.8,
+        y: '-200%',
+        stagger: 0.05,
+        delay: 0.3,
+      })
+    }
+  }
 
 /**CHANGE IMAGE ON HOVER */
 

@@ -27,7 +27,26 @@
     require "header.php";  //Calling for the header
 ?>
 
-    <main>    
+    <main> 
+    <section class="largeTitle">
+      <h2 class="largeTitle-txt">
+        <div class="line-0">
+          <div class="char-1">A</div>
+          <div class="char-1">N</div>
+          <div class="char-1">G</div>
+          <div class="char-1">E</div>
+          <div class="char-1">L</div>
+        </div>
+      </h2>  
+    </section>
+
+    <div class="ctt">
+      <h2 class="cttxt">ANGEL</h2>
+    </div>
+    
+
+    
+
       <section class="me">  <!--Page content-->
         <h2 id="titi" class="zoom ">
           Angel ?

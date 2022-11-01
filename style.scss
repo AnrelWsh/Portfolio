@@ -628,3 +628,31 @@ footer{
   background-color: antiquewhite;
 }
 /*------------------------------------OTHER-----------------------------*/
+
+
+
+.largeTitle {
+  height: 150vh;
+  overflow: hidden;
+  width: 100%;
+}
+.largeTitle .largeTitle-txt {
+  margin-left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+}
+.largeTitle .line-0 {
+  display: block;
+  text-align: start;
+  position: relative;
+  transform: translate(0px, 0px);
+
+  padding: 0 4rem;
+  will-change: transform;
+}
+.char-1{
+  position: relative;
+  display: inline-block;
+  transform: translate(0px, 0%);
+}
+
