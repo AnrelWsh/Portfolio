@@ -189,13 +189,13 @@ const me3 = document.getElementById("me3")
 
 if(me1 && me2 && me3 !== null) {
   me1.addEventListener('mouseover', () => {
-    imgMe.src = "../img/logoIIM.png" 
+    imgMe.src = "img/logoIIM.png" 
   })
   me2.addEventListener('mouseover', () => {
-      imgMe.src = "../img/workstudy.jpg" 
+      imgMe.src = "img/workstudy.jpg" 
   })
   me3.addEventListener('mouseover', () => {
-      imgMe.src = "../img/moi.gif"
+      imgMe.src = "img/moi.gif"
   })
 }
 
