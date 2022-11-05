@@ -8,7 +8,7 @@
     </a>
     <img id="gifFoot" src="img/anrelgif.gif" alt="Logo Anrel GIF">
     <div id="mycontact">
-        <a class="select-menu" href="https://www.instagram.com/a_aine_jai_eu_el/" target="_blank" rel="nofollow"><img src="img/insta.svg" alt="Contact Instagram"></a>
-        <a class="select-menu" href="https://github.com/AnrelWsh?tab=repositories" target="_blank" rel="nofollow"><img src="img/github.svg" alt="Contact Github"></a>
+        <a class="select-menu" href="https://www.instagram.com/a_aine_jai_eu_el/" target="_blank"><img src="img/insta.svg" alt="Contact Instagram"></a>
+        <a class="select-menu" href="https://github.com/AnrelWsh?tab=repositories" target="_blank"><img src="img/github.svg" alt="Contact Github"></a>
     </div>
 </footer>

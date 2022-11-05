@@ -54,7 +54,7 @@
         <div class="me-content afterzoom">
           <div class="me-txt">
             <p id="me1">
-              - Student at <a href="https://www.iim.fr/" rel="nofollow">IIM Digital School</a> (Institute of Internet and Multimedia)
+              - Student at <a href="https://www.iim.fr/">IIM Digital School</a> (Institute of Internet and Multimedia)
             </p>
             <p id="me2">
               - Looking for a work-study / apprenticeship for September 2023

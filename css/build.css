@@ -26,7 +26,7 @@
   }
 }
 html {
-  background-image: url("img/fond.jpeg");
+  background-image: url("../img/fond.jpeg");
   animation: animback 25s ease infinite;
   overflow-x: hidden;
   cursor: crosshair;
@@ -583,7 +583,7 @@ h2 {
   margin: 0;
 }
 .projects .project1 .project-card {
-  background-image: url(img/prjt-asc.jpg);
+  background-image: url(../img/prjt-asc.jpg);
 }
 .projects .project2 {
   display: flex;
@@ -643,7 +643,7 @@ h2 {
   margin: 0;
 }
 .projects .project2 .project-card {
-  background-image: url(img/prjt-rueil.jpg);
+  background-image: url(../img/prjt-rueil.jpg);
 }
 .projects .project3 {
   display: flex;
@@ -703,7 +703,7 @@ h2 {
   margin: 0;
 }
 .projects .project3 .project-card {
-  background-image: url(img/zikos.jpg);
+  background-image: url(../img/zikos.jpg);
 }
 
 .reveal {
@@ -845,5 +845,31 @@ footer #mycontact img {
 }
 
 /*------------------------------------OTHER-----------------------------*/
+.largeTitle {
+  height: 150vh;
+  overflow: hidden;
+  width: 100%;
+}
+
+.largeTitle .largeTitle-txt {
+  margin-left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+}
+
+.largeTitle .line-0 {
+  display: block;
+  text-align: start;
+  position: relative;
+  transform: translate(0px, 0px);
+  padding: 0 4rem;
+  will-change: transform;
+}
+
+.char-1 {
+  position: relative;
+  display: inline-block;
+  transform: translate(0px, 0%);
+}
 
 /*# sourceMappingURL=build.css.map */

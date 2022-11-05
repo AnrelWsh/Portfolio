@@ -36,7 +36,7 @@
           <div class="project-txt">
             <h4>Anrel Smart Clothes</h4>
             <p>Anrel Smart Clothes is a website where you can see the new Anrel connected hoodie, linked to its app. You can also read all the articles in the blog, post comments and many others things!</p>
-            <a href="http://www.anrelsmartclothes.tk/home.php"><p class="magnet">See Project</p></a>
+            <a href="http://www.anrelsmartclothes.tk/home.php" target="_blank"><p class="magnet">See Project</p></a>
           </div>
         </div>
         <div class="project2 reveal">
@@ -44,7 +44,7 @@
           <div class="project-txt">
             <h4>Rueil Website</h4>
             <p>This website was made to make people discover the city of Rueil-Malmaison. A beautiful city with its plains, the Seine and its wild grid displays !</p>
-            <a href="https://anrelwsh.github.io/ProjetRueil/" rel="nofollow"><p class="magnet">See Project</p></a>
+            <a href="https://anrelwsh.github.io/ProjetRueil/" target="_blank"><p class="magnet">See Project</p></a>
           </div>
         </div>
         <div class="project3 reveal">
@@ -52,7 +52,7 @@
           <div class="project-txt">
             <h4>Hobbie Website</h4>
             <p>This website was made to make people discover my hobbie: the music. Here I'll tell you what and why I like. There are also artist pages to make you dicover some of them.</p>
-            <a href="https://sitepassion.vercel.app/" rel="nofollow"><p class="magnet">See Project</p></a>
+            <a href="https://sitepassion.vercel.app/" target="_blank"><p class="magnet">See Project</p></a>
           </div>
         </div>
       </section>

@@ -8,7 +8,7 @@
     <!----------------------META TAGS FOR SEARCH ENGINE OPTIMISATION-------------------------->
     <meta name="author" content="Angel Hmeli"> <!--Name of the author-->
     <meta name="description" content="<?php echo $pageDescription; ?>"> <!--Page description in search engines-->
-    <meta name="robots" content="max-snippet:-1, max-image-preview:standard"><!--Robots settings for searche engines-->
+    <meta name="robots" content="max-snippet:-1"><!--Robots settings for searche engines-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--Vieewport init for responsive-->
     <title>
         <?php 
@@ -33,6 +33,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
 
     <link rel="icon" type="image/x-icon" href="img/anrel.png"><!--Document icon-->
-    <link rel="stylesheet" href="build.css"><!--Style link-->
+    <link rel="stylesheet" href="css/build.css"><!--Style link-->
 </head>
 

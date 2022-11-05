@@ -4,4 +4,4 @@
 <script src="node_modules/magnet-mouse/lib/magnet-mouse.min.js"></script>
 
 <!--Calling javascript-->
-<script src="script.js"></script>
+<script src="js/script.js"></script>

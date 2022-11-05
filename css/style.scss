@@ -30,7 +30,7 @@
   }
 }
 html{
-  background-image: url("img/fond.jpeg");
+  background-image: url("../img/fond.jpeg");
   animation: animback 25s ease infinite;
   overflow-x: hidden;
   cursor: crosshair;
@@ -484,19 +484,19 @@ h2{
   .project1{
     @include mixins.projectCard(row);
     .project-card{
-      background-image: url(img/prjt-asc.jpg)
+      background-image: url(../img/prjt-asc.jpg)
     }
   }
   .project2{
     @include mixins.projectCard(row-reverse);
     .project-card{
-      background-image: url(img/prjt-rueil.jpg)
+      background-image: url(../img/prjt-rueil.jpg)
     }
   }
   .project3{
     @include mixins.projectCard(row);
     .project-card{
-      background-image: url(img/zikos.jpg)
+      background-image: url(../img/zikos.jpg)
     }
   }
 }
