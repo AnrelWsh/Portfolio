@@ -201,7 +201,7 @@ if(me1 && me2 && me3 !== null) {
 
 
 /**INIT MAGNET MOUSE API */
-
+import MagnetMouse from 'magnet-mouse';
 let mm = new MagnetMouse({
   magnet: {
     element: '.magnet',
