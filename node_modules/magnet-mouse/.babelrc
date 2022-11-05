@@ -1,0 +1,10 @@
+{
+  "presets": [
+    ["@babel/preset-env", {
+      "targets": {
+        "browsers": ["> 0.5%", "IE 11"]
+      }
+    }]
+  ],
+  "plugins": ["@babel/plugin-proposal-object-rest-spread"]
+}

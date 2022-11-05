@@ -1,0 +1,73 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Callback - Magnet mouse</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/demo.css">
+    <style type="text/css">
+        .magnet {
+            transition: transform .3s ease, background-color .3s ease;
+        }
+        .follow {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 50px;
+            height: 50px;
+            background-color: #f0d647;
+            border: 2px solid #f0d647;
+            border-radius: 100%;
+            transition: all .2s ease;
+        }
+        .follow-mouse-active {
+            border-radius: 100px;
+            background-color: transparent;
+            transition: transform .3s ease, width .2s .3s ease, height .2s .3s ease, left .2s .3s ease, top .2s .3s ease, background-color .2s .3s ease, border-radius .2s .3s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="block">
+        <a href="#" class="magnet">Magnet mouse</a>
+    </div>
+    <div class="follow"></div>
+
+    <script src="assets/js/magnet-mouse.js"></script>
+    <script>
+      let mm = new MagnetMouse({
+        magnet: {
+          element: '.magnet',
+        },
+        follow: {
+          element: '.follow'
+        },
+        inCallback: function (data) {
+
+          let follow = document.querySelector(mm.config.follow.element);
+
+          follow.style.width = data.elem.width + 4;
+          follow.style.height = data.elem.height + 4;
+          follow.style.left = - (data.elem.width / 2) - 2;
+          follow.style.top = - (data.elem.height / 2) - 2;
+
+          follow.classList.add('follow-mouse-active');
+
+        },
+        outCallback: function () {
+
+          let follow = document.querySelector(mm.config.follow.element);
+
+          follow.style.width = '';
+          follow.style.height = '';
+          follow.style.left = '';
+          follow.style.top = '';
+
+          follow.classList.remove('follow-mouse-active');
+
+        }
+      });
+
+      mm.init();
+    </script>
+</body>
+</html>

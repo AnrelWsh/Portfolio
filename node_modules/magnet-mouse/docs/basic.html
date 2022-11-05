@@ -1,0 +1,24 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Basic usage - Magnet mouse</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/demo.css">
+</head>
+<body>
+    <div class="block">
+        <a href="#" class="magnet">Magnet mouse</a>
+    </div>
+
+    <script src="assets/js/magnet-mouse.js"></script>
+    <script>
+      let mm = new MagnetMouse({
+        magnet: {
+          element: '.magnet',
+        }
+      });
+
+      mm.init();
+    </script>
+</body>
+</html>
