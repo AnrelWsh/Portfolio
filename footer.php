@@ -1,5 +1,4 @@
 <!--Footer content-->
-
 <footer>
     <h2 id="contact" >CONTACT</h2>
     <h3>If you like my work, just contact me !</h3>
