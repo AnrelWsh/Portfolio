@@ -200,18 +200,6 @@ if(me1 && me2 && me3 !== null) {
 }
 
 
-/**INIT MAGNET MOUSE API */
-
-let mm = new MagnetMouse({
-  magnet: {
-    element: '.magnet',
-    position: "center"
-  }
-}
-);
-mm.init();
-
-
 /*SKILLS SECTION GRID DISPLAY CHANGES*/
 
 var skillsSec = document.getElementById("skills")
@@ -354,3 +342,15 @@ const observer = new IntersectionObserver(intersect, options)
 document.querySelectorAll('.reveal').forEach(function (r){
   observer.observe(r)
 })
+
+
+/**INIT MAGNET MOUSE API */
+
+let mm = new MagnetMouse({
+  magnet: {
+    element: '.magnet',
+    position: "center"
+  }
+}
+);
+mm.init();
