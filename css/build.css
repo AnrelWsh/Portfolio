@@ -308,7 +308,7 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 5vw;
+  padding: 0 5vw;
 }
 @media screen and (max-width: 1000px) {
   .me-content {
@@ -821,11 +821,12 @@ footer #mycontact img {
 
 /*------------------------------------PROJECTS-----------------------------*/
 /*------------------------------------OTHER-----------------------------*/
-.zoom {
-  height: 100vh;
-  width: 100%;
+#zoomTitle {
+  font-size: 600px;
+  height: 50vh;
   display: grid;
-  place-items: center;
+  align-items: center;
+  justify-content: center;
 }
 
 ::-webkit-scrollbar {
