@@ -10,13 +10,14 @@
       <meta name="description" content="Welcome to this Incredible web portfolio. Here Angel, a future Fullstack developer, will show you his newest website projects. You wanna be amazed? You'll be!"> <!--Page description in search engines-->
       <meta name="robots" content="max-snippet:-1"><!--Robots settings for searche engines-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--Vieewport init for responsive-->
+      <link rel="canonical" href="https://anrel-portfolio.vercel.app/" /> <!--The main url I want to skyrocket-->
       <title>Projects - Anrel Portfolio</title>
 
       <!----------------------OPEN GRAPHS TAGS FOR SOCIAL MEDIA DISPLAY OPTIMISATION-------------------------->
       <meta name="og:title" property="og:title" content="Projects - Anrel Portfolio">
       <meta name="og:author" content="Angel Hmeli"><!--Name of the author-->
       <meta name="og:description" content="Welcome to this Incredible web portfolio. Here Angel, a future Fullstack developer, will show you his newest website projects. You wanna be amazed? You'll be!"><!--Page description in social media displays-->
-      <meta name="og:image" content="img/landingscreen.jpg"><!--Displayed image for social media posts-->
+      <meta name="og:image" content="https://anrel-portfolio.vercel.app/img/landingscreen.jpg"><!--Displayed image for social media posts-->
       
       <!----------------------CALLING DIFFERENT SNIPPETS FOR EACH PAGE-------------------------->
       <script type="application/ld+json">
@@ -26,9 +27,7 @@
           "headline": "Discover Angel`s marvelous projects",
           "image": [
             "img/",
-            "https://example.com/photos/4x3/photo.jpg",
-            "https://example.com/photos/4x3/photo.jpg",
-            "https://example.com/photos/16x9/photo.jpg"
+            "https://anrel-portfolio.vercel.app/img/landingscreen.jpg"
           ],
           "datePublished": "2022-10-10"
           "author": [{
@@ -51,17 +50,17 @@
   <body id="body">
     <header>
         <div id="divLoading"> <!--Display at page loading-->
-            <img class="loading" src="img/anrelgif.gif" alt="Loading Logo Anrel GIF">
+            <img class="loading" src="img/anrelgif.gif" alt="Loading Logo Anrel GIF" loading="lazy">
         </div>
 
         <section class="intro"> <!--White text and logo sliding at the top of the page-->
         <h1 id="ttlIntro">ANGEL HMELI'S WEB PORTFOLIO</h1>
-        <img id="logoIntro" src="img/anrelgif.gif" alt="Logo Anrel GIF"></img>
+        <img id="logoIntro" src="img/anrelgif.gif" alt="Logo Anrel GIF" loading="lazy">
         </section>
 
         <nav id="navbar"> <!--Navbar display-->
             <a href="#accueil"> <!--Website logo-->
-                <img src="img/anrelgif.gif" alt="Logo Anrel GIF">
+                <img src="img/anrelgif.gif" alt="Logo Anrel GIF" loading="lazy">
             </a>
             <div id="menu-btn" class="menu-btn-close"> <!--Page navigation logo-->
                 <div></div>
@@ -100,7 +99,7 @@
 
         <div class="sep"> <!--Separation text-->
             <div class="sep-line"></div>
-            <img src="img/anrel.png" alt="Logo Anrel Separation">
+            <img src="img/anrel.png" alt="Logo Anrel Separation" loading="lazy">
             <div class="sep-line"></div>
         </div>
     </header>
@@ -147,10 +146,14 @@
         <a id="cv" class="select-menu" href="img/cv.pdf" target="_blank">
             <h4>Resume</h4>
         </a>
-        <img id="gifFoot" src="img/anrelgif.gif" alt="Logo Anrel GIF">
+        <img id="gifFoot" src="img/anrelgif.gif" alt="Logo Anrel GIF" loading="lazy">
         <div id="mycontact">
-            <a class="select-menu" href="https://www.instagram.com/a_aine_jai_eu_el/" target="_blank"><img src="img/insta.svg" alt="Contact Instagram"></a>
-            <a class="select-menu" href="https://github.com/AnrelWsh?tab=repositories" target="_blank"><img src="img/github.svg" alt="Contact Github"></a>
+            <a class="select-menu" href="https://www.instagram.com/a_aine_jai_eu_el/" target="_blank">
+              <img src="img/insta.svg" alt="Contact Instagram" loading="lazy">
+            </a>
+            <a class="select-menu" href="https://github.com/AnrelWsh?tab=repositories" target="_blank">
+              <img src="img/github.svg" alt="Contact Github" loading="lazy">
+            </a>
         </div>
     </footer>
 
