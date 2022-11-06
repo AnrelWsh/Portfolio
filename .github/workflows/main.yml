@@ -1,0 +1,48 @@
+- name: Markdown SEO Check
+  # You may pin to the exact commit or the version.
+  # uses: zentered/markdown-seo-check@860fdc7a5cef83835033ffb6615cfb8d8c36ee0b
+  uses: zentered/markdown-seo-check@v1.0.0
+  with:
+    # Maximum length for page title
+    max_title_length: # default is 70
+    # Maximum length for description
+    max_description_length: # default is 150
+    # Maximum length for slug
+    max_slug_length: # default is 100
+    
+    
+- name: Binoculars Action
+  # You may pin to the exact commit or the version.
+  # uses: foo-software/binoculars-action@21e84de9937428b73a157aef7226113dc3ce1fd3
+  uses: foo-software/binoculars-action@v1.0.2
+  with:
+    # For Slack notifications: A user handle, typically from GitHub.
+    author: # optional
+    # The AWS accessKeyId for an S3 bucket.
+    awsAccessKeyId: # optional
+    # The AWS Bucket for an S3 bucket.
+    awsBucket: # optional
+    # The AWS region for an S3 bucket.
+    awsRegion: # optional
+    # The AWS secretAccessKey for an S3 bucket.
+    awsSecretAccessKey: # optional
+    # For Slack notifications: A version control branch, typically from GitHub.
+    branch: # optional
+    # An endpoint to post comments to. This is only needed if you want to trigger comments on 'push'. A 'pull_request' trigger does not require this to be set. Typically this will be from GitHub's API. Example: https://api.github.com/repos/:owner/:repo/commits/:commit_sha/comments.
+    commentUrl: # optional
+    # If true and accessToken is set scores will be posted as comments.
+    enableComments: # optional
+    # The required minimum score. If score is lower an error will throw.
+    minScore: # optional
+    # An absolute directory path to output report. You can do this an an alternative or combined with an S3 upload.
+    outputDirectory: # optional
+    # For Slack notifications: A version control pull request URL, typically from GitHub.
+    pr: # optional
+    # Access token of a user to post PR comments.
+    accessToken: # optional
+    # For Slack notifications: A version control sha, typically from GitHub.
+    sha: # optional
+    # A Slack Incoming Webhook URL to send notifications to.
+    slackWebhookUrl: # optional
+    # A pipe separated list of URLs.
+    urls: # optional
