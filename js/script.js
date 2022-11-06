@@ -75,7 +75,6 @@ bigLogo.forEach(el => {
 
 /**GSAP API ANIMATION OF SLIDE TITLE */
 
-gsap.registerPlugin(ScrollTrigger);
 const slideTitleUp = document.querySelectorAll('.slide-title')
 const slideTitleDown = document.querySelectorAll('.slide-title-reverse')
 
@@ -106,7 +105,6 @@ slideTitleDown.forEach(el => {
 
 /** ME TITLE SCROLL ANIMATION*/
 
-gsap.registerPlugin(ScrollTrigger);
 const titi = document.querySelectorAll('#zoomTitle')
 
 titi.forEach(el => {
@@ -251,6 +249,39 @@ if(frontEnd && backEnd && adobeSkill && otherSkill !== null) {
 }
 
 
+/**PROJECT TITLE SLIDE AND GROWTH */
+
+const projTitle1 = document.querySelectorAll('#projTitle1')
+const projTitle2 = document.querySelectorAll('#projTitle2')
+
+projTitle1.forEach(el => {
+  gsap.to(el, {
+      scrollTrigger: {
+      trigger: el,
+      start: "top bottom",
+      end: "top",
+      scrub: 1,
+      toggleActions : "play"
+      },
+      x: "11vw",
+      scale: 1.5
+  })
+})
+projTitle2.forEach(el => {
+  gsap.to(el, {
+      scrollTrigger: {
+      trigger: el,
+      start: "top bottom",
+      end: "top",
+      scrub: 1,
+      toggleActions : "play"
+      },
+      x: "-11vw",
+      scale: 1.5
+  })
+})
+
+
 /**FADE APPARITION OF PROJECTS WITH ITERSECTION OBSERVER API AND IMAGE MOVING WITH CURSOR ON IT*/
 
 const ratio = .3
@@ -273,9 +304,10 @@ const intersect = function (entries, observer){
         var ax = (self.innerWidth/2- e.pageX)/20
         var ay = (self.innerHeight/10- e.pageY)/10
         var ay =+ ay + 90
-        var ay =- ay + 180
+        var ay =- ay -80
+        var ayy =- ay +90
         document.getElementById("project-card2").style.transform = "rotateY("+ax+"deg) rotateX("+ay+"deg)"
-        document.getElementById("project-card3").style.transform = "rotateY("+ax+"deg) rotateX("+ay+"deg)"
+        document.getElementById("project-card3").style.transform = "rotateY("+ax+"deg) rotateX("+ayy+"deg)"
       })
       observer.unobserve(entry.target)
     }  
@@ -294,6 +326,6 @@ let mm = new MagnetMouse({
     element: '.magnet',
     position: "center"
   }
-}
-);
+})
+
 mm.init();
