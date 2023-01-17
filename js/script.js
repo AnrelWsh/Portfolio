@@ -308,6 +308,7 @@ const intersect = function (entries, observer){
         var ayy =- ay +90
         document.getElementById("project-card2").style.transform = "rotateY("+ax+"deg) rotateX("+ay+"deg)"
         document.getElementById("project-card3").style.transform = "rotateY("+ax+"deg) rotateX("+ayy+"deg)"
+        document.getElementById("project-card4").style.transform = "rotateY("+ax+"deg) rotateX("+ayy+"deg)"
       })
       observer.unobserve(entry.target)
     }  
