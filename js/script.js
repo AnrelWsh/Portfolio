@@ -297,18 +297,23 @@ const intersect = function (entries, observer){
       document.addEventListener("mousemove", function(e) {  
         var ax = (self.innerWidth/2- e.pageX)/20
         var ay = (self.innerHeight/10- e.pageY)/10
-        var ay =- ay + 180
-        document.getElementById("project-card1").style.transform = "rotateY("+ax+"deg) rotateX("+ay+"deg)"
-      })
-      document.addEventListener("mousemove", function(e) {  
-        var ax = (self.innerWidth/2- e.pageX)/20
-        var ay = (self.innerHeight/10- e.pageY)/10
-        var ay =+ ay + 90
-        var ay =- ay -80
-        var ayy =- ay +90
-        document.getElementById("project-card2").style.transform = "rotateY("+ax+"deg) rotateX("+ay+"deg)"
-        document.getElementById("project-card3").style.transform = "rotateY("+ax+"deg) rotateX("+ayy+"deg)"
-        document.getElementById("project-card4").style.transform = "rotateY("+ax+"deg) rotateX("+ayy+"deg)"
+
+        var ay1 =+ ay + 150
+        
+        var ay2 =+ ay + 180
+
+        var ay3 =- ay +90
+
+        var ay4 =- ay +50
+
+        var ay5 = ay 
+
+        document.getElementById("project-card1").style.transform = "rotateY("+ax+"deg) rotateX("+ay1+"deg)"
+        document.getElementById("project-card2").style.transform = "rotateY("+ax+"deg) rotateX("+ay2+"deg)"
+        document.getElementById("project-card3").style.transform = "rotateY("+ax+"deg) rotateX("+ay3+"deg)"
+        document.getElementById("project-card4").style.transform = "rotateY("+ax+"deg) rotateX("+ay3+"deg)"
+        document.getElementById("project-card5").style.transform = "rotateY("+ax+"deg) rotateX("+ay4+"deg)"
+        document.getElementById("project-card6").style.transform = "rotateY("+ax+"deg) rotateX("+ay5+"deg)"
       })
       observer.unobserve(entry.target)
     }  

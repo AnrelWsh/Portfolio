@@ -517,6 +517,18 @@ h2{
       background-image: url(../img/zikos.jpg)
     }
   }
+  .project5{
+    @include mixins.projectCard(row);
+    .project-card{
+      background-image: url(../img/zikos.jpg)
+    }
+  }
+  .project6{
+    @include mixins.projectCard(row-reverse);
+    .project-card{
+      background-image: url(../img/zikos.jpg)
+    }
+  }
 }
 
 // Lateral fade in animation

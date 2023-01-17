@@ -777,6 +777,126 @@ h2 {
 .projects .project4 .project-card {
   background-image: url(../img/zikos.jpg);
 }
+.projects .project5 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+  margin: 0 4%;
+  padding: 1% 1%;
+}
+@media screen and (max-width: 1200px) {
+  .projects .project5 {
+    flex-direction: column;
+    margin: 5%;
+  }
+}
+.projects .project5 img {
+  border-radius: 25px;
+  border: solid 4px black;
+}
+.projects .project5 .project-card {
+  height: 22vw;
+  width: 100%;
+  margin: 0 auto;
+  transition: box-shadow 0.1s, transform 0.1s;
+  background-size: contain;
+  background-repeat: round;
+  border-radius: 25px;
+  border: solid 4px black;
+  transform: translateZ(0);
+  margin: 3%;
+}
+@media screen and (max-width: 1200px) {
+  .projects .project5 .project-card {
+    width: 70%;
+    height: 35vw;
+  }
+}
+.projects .project5 .project-card:after {
+  content: " ";
+  width: 100%;
+  height: 10px;
+}
+.projects .project5 .project-txt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.projects .project5 .project-txt h4 {
+  font-size: 45px;
+}
+.projects .project5 .project-txt p {
+  margin: 3%;
+}
+.projects .project5 .project-txt .magnet {
+  margin: 0;
+}
+.projects .project5 .project-card {
+  background-image: url(../img/zikos.jpg);
+}
+.projects .project6 {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+  margin: 0 4%;
+  padding: 1% 1%;
+}
+@media screen and (max-width: 1200px) {
+  .projects .project6 {
+    flex-direction: column;
+    margin: 5%;
+  }
+}
+.projects .project6 img {
+  border-radius: 25px;
+  border: solid 4px black;
+}
+.projects .project6 .project-card {
+  height: 22vw;
+  width: 100%;
+  margin: 0 auto;
+  transition: box-shadow 0.1s, transform 0.1s;
+  background-size: contain;
+  background-repeat: round;
+  border-radius: 25px;
+  border: solid 4px black;
+  transform: translateZ(0);
+  margin: 3%;
+}
+@media screen and (max-width: 1200px) {
+  .projects .project6 .project-card {
+    width: 70%;
+    height: 35vw;
+  }
+}
+.projects .project6 .project-card:after {
+  content: " ";
+  width: 100%;
+  height: 10px;
+}
+.projects .project6 .project-txt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.projects .project6 .project-txt h4 {
+  font-size: 45px;
+}
+.projects .project6 .project-txt p {
+  margin: 3%;
+}
+.projects .project6 .project-txt .magnet {
+  margin: 0;
+}
+.projects .project6 .project-card {
+  background-image: url(../img/zikos.jpg);
+}
 
 .reveal {
   opacity: 0;
