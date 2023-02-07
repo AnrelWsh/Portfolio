@@ -618,6 +618,7 @@ footer{
 
     img{
       width: 5vw;
+      padding: 8px;
       
       @include mixins.responsive(1000px){
         width: 10vw;

@@ -940,6 +940,7 @@ footer #mycontact h4 {
 }
 footer #mycontact img {
   width: 5vw;
+  padding: 8px;
 }
 @media screen and (max-width: 1000px) {
   footer #mycontact img {
