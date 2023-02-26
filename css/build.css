@@ -990,6 +990,11 @@ footer #mycontact img {
   align-items: center;
   justify-content: center;
 }
+@media screen and (max-width: 600px) {
+  #zoomTitle {
+    font-size: 500px;
+  }
+}
 
 ::-webkit-scrollbar {
   width: 15px;

@@ -654,6 +654,10 @@ footer{
   display: grid;
   align-items: center;
   justify-content: center;
+
+  @include mixins.responsive(600px){
+    font-size: 500px;
+  }
 }
 
 // Scrollbar's new style
