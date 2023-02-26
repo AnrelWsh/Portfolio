@@ -347,30 +347,34 @@ h2{
     @include mixins.responsive(600px){
       font-size: 25px;
     }
+
+    @include mixins.responsive(450px){
+      font-size: 20px;
+    }
   }
 
   #fe{
     grid-area: fe;
     &::after{
-      content: "⯆";
+      content: "⯆" / "";
     }
   }
   #be{
     grid-area: be;
     &::after{
-      content: "⯆";
+      content: "⯆" / "";
     }
   }
   #adobe{
     grid-area: adobe;
     &::after{
-      content: "⯆";
+      content: "⯆" / "";
     }
   }
   #other{
     grid-area: other;
     &::after{
-      content: "⯆";
+      content: "⯆" / "";
     }
   }
 }
@@ -424,6 +428,10 @@ h2{
 
       @include mixins.responsive(800px){
         width: 25vw;
+      }
+      @include mixins.responsive(600px){
+        width: 70%;
+        margin: 3%;
       }
     }
 
@@ -492,7 +500,7 @@ h2{
   background-color: antiquewhite;
 
   &::after{
-    content: "▶";
+    content: "▶" / "";
   }
 }
 /*------------------------------------SKILLS-----------------------------*/

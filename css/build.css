@@ -425,29 +425,34 @@ h2 {
     font-size: 25px;
   }
 }
+@media screen and (max-width: 450px) {
+  .skills-init h3 {
+    font-size: 20px;
+  }
+}
 .skills-init #fe {
   grid-area: fe;
 }
 .skills-init #fe::after {
-  content: "⯆";
+  content: "⯆"/"";
 }
 .skills-init #be {
   grid-area: be;
 }
 .skills-init #be::after {
-  content: "⯆";
+  content: "⯆"/"";
 }
 .skills-init #adobe {
   grid-area: adobe;
 }
 .skills-init #adobe::after {
-  content: "⯆";
+  content: "⯆"/"";
 }
 .skills-init #other {
   grid-area: other;
 }
 .skills-init #other::after {
-  content: "⯆";
+  content: "⯆"/"";
 }
 
 .skills-clicked {
@@ -490,6 +495,12 @@ h2 {
 @media screen and (max-width: 800px) {
   .skills-clicked-content img {
     width: 25vw;
+  }
+}
+@media screen and (max-width: 600px) {
+  .skills-clicked-content img {
+    width: 70%;
+    margin: 3%;
   }
 }
 .skills-clicked-content .logo1 {
@@ -554,7 +565,7 @@ h2 {
   background-color: antiquewhite;
 }
 .skills-selected::after {
-  content: "▶";
+  content: "▶"/"";
 }
 
 /*------------------------------------SKILLS-----------------------------*/
