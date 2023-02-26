@@ -420,6 +420,11 @@ h2 {
     font-size: 30px;
   }
 }
+@media screen and (max-width: 600px) {
+  .skills-init h3 {
+    font-size: 25px;
+  }
+}
 .skills-init #fe {
   grid-area: fe;
 }
@@ -469,7 +474,7 @@ h2 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto auto auto;
-  grid-template-areas: "logo1 . logo2" ". logo3 ." "logo4 . logo5";
+  grid-template-areas: "logo1 . logo2" "logo6 logo3 logo7" "logo4 . logo5";
   gap: 2%;
   margin: 5%;
 }
@@ -501,6 +506,12 @@ h2 {
 }
 .skills-clicked-content .logo5 {
   grid-area: logo5;
+}
+.skills-clicked-content .logo6 {
+  grid-area: logo6;
+}
+.skills-clicked-content .logo7 {
+  grid-area: logo7;
 }
 
 #content-fe {
@@ -992,7 +1003,7 @@ footer #mycontact img {
 }
 @media screen and (max-width: 600px) {
   #zoomTitle {
-    font-size: 500px;
+    font-size: 400px;
   }
 }
 

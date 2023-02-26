@@ -343,6 +343,10 @@ h2{
     @include mixins.responsive(1000px){
       font-size: 30px;
     }
+
+    @include mixins.responsive(600px){
+      font-size: 25px;
+    }
   }
 
   #fe{
@@ -405,7 +409,7 @@ h2{
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto auto auto;
     grid-template-areas:"logo1 . logo2"
-                        ". logo3 ."
+                        "logo6 logo3 logo7"
                         "logo4 . logo5";
     gap: 2%;
     margin: 5%;
@@ -438,6 +442,14 @@ h2{
     .logo5
     {
       grid-area: logo5;
+    }
+    .logo6
+    {
+      grid-area: logo6;
+    }
+    .logo7
+    {
+      grid-area: logo7;
     }
 
   }
@@ -656,7 +668,7 @@ footer{
   justify-content: center;
 
   @include mixins.responsive(600px){
-    font-size: 500px;
+    font-size: 400px;
   }
 }
 
