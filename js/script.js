@@ -57,7 +57,7 @@ bigTitle.forEach(el => {
       scrub: 1,
       toggleActions : "play"      
       },
-      x: 150,
+      x: 100,
   })
 })
 bigLogo.forEach(el => {
@@ -69,14 +69,14 @@ bigLogo.forEach(el => {
       scrub: 1,
       toggleActions : "play"
       },
-      x: -150,
+      x: -100,
   })
 })
 
 
 /**GSAP API ANIMATION OF SLIDE TITLE */
 
-const slideTitleUp = document.querySelectorAll('.slide-title')
+const slideTitleUp = document.querySelectorAll('.slide-title-up')
 const slideTitleDown = document.querySelectorAll('.slide-title-reverse')
 
 slideTitleUp.forEach(el => {
@@ -88,7 +88,7 @@ slideTitleUp.forEach(el => {
       scrub: 1,
       toggleActions : "play"
       },
-      x: -200,
+      x: -100,
   })
 })
 slideTitleDown.forEach(el => {
@@ -100,7 +100,7 @@ slideTitleDown.forEach(el => {
       scrub: 1,
       toggleActions : "play"
       },
-      x: 300,
+      x: 100,
   })
 })
 
