@@ -48,6 +48,10 @@
       font-size: 70px;
     }
 
+    @include mixins.responsive(500px){
+      font-size: 50px;
+    }
+
     &-reverse{
       transform: rotate(180deg);
       line-height: 2vh;
@@ -58,6 +62,10 @@
 
       @include mixins.responsive(650px){
         font-size: 70px;
+      }
+
+      @include mixins.responsive(500px){
+        font-size: 50px;
       }
     }
 }

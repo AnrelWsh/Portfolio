@@ -6,6 +6,7 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: antiquewhite;
   text-decoration: none;
+  overflow-x: hidden;
 }
 
 @keyframes animback {
@@ -165,6 +166,17 @@ html {
     font-size: 50px;
   }
 }
+@media screen and (max-width: 600px) {
+  #menu .menu-nav h3 {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 470px) {
+  #menu .menu-nav h3 {
+    font-size: 35px;
+    text-align: center;
+  }
+}
 
 .select-menu {
   color: #570A57;
@@ -206,7 +218,14 @@ html {
 @media screen and (max-width: 1000px) {
   .intro h1 {
     width: 100%;
-    margin: 1%;
+    margin-left: 1%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .intro h1 {
+    width: 150%;
+    margin: 0;
+    font-size: 70px;
   }
 }
 .intro img {
@@ -230,6 +249,11 @@ html {
     font-size: 70px;
   }
 }
+@media screen and (max-width: 500px) {
+  .slide-title {
+    font-size: 50px;
+  }
+}
 .slide-title-reverse {
   transform: rotate(180deg);
   line-height: 2vh;
@@ -242,6 +266,11 @@ html {
 @media screen and (max-width: 650px) {
   .slide-title-reverse {
     font-size: 70px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .slide-title-reverse {
+    font-size: 50px;
   }
 }
 

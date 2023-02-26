@@ -24,6 +24,7 @@ window.addEventListener("load", function(){
 const btnBurger = document.getElementById('menu-btn')
 const menuBurger = document.getElementById('menu')
 const nOverflow = document.getElementById('html')
+menuBurger.style.display = "none"
 
 btnBurger.onclick = function()  {
   if (menuBurger.style.display == "none") {

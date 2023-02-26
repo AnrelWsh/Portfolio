@@ -9,6 +9,7 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: antiquewhite;
   text-decoration: none;
+  overflow-x: hidden;
 }
 
 // Website's background animation
@@ -171,6 +172,13 @@ html{
       @include mixins.responsive(620px){
         font-size: 50px;
       }
+      @include mixins.responsive(600px){
+        font-size: 40px;
+      }
+      @include mixins.responsive(470px){
+        font-size: 35px;
+        text-align: center
+      }
     }
   }
 }
@@ -199,7 +207,12 @@ html{
 
     @include mixins.responsive(1000px){
       width: 100%;
-      margin: 1%;
+      margin-left: 1%;
+    }
+    @include mixins.responsive(600px){
+      width: 150%;
+      margin: 0;
+      font-size: 70px;
     }
   }
 
