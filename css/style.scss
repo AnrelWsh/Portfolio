@@ -465,15 +465,19 @@ h2{
 
 #content-fe{
   display: none;
+  justify-items: center;
 }
 #content-be{
   display: none;
+  justify-items: center;
 }
 #content-adobe{
   display: none;
+  justify-items: center;
 }
 #content-other{
   display: none;
+  justify-items: center;
 }
 
 .skills-title{
@@ -517,6 +521,10 @@ h2{
       font-size: 40px;
     }
   }
+
+  @include mixins.responsive(700px){
+    gap: 7vw;
+  }
 }
 
 // Projects' display style
@@ -553,6 +561,16 @@ h2{
     @include mixins.projectCard(row);
     .project-card{
       background-image: url(../img/projects/prjt-algo.jpg)
+    }
+  }
+
+  h4{
+    text-align: center;
+  }
+
+  @include mixins.responsive(600px){
+    .project-card{
+      transform: none;
     }
   }
 }
